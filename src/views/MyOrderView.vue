@@ -41,11 +41,11 @@
     <section class="container py-16 flex flex-row items-center justify-evenly">
       <div>
         <div class="font-lato font-bold text-4xl mb-4">Latest</div>
-        <MyCustomOrder />
+        <MyCustomOrder ispending="yes" />
       </div>
       <div>
         <div class="font-lato font-bold text-4xl mb-4">Previous</div>
-        <MyCustomOrder />
+        <MyCustomOrder ispending="no" />
       </div>
     </section>
   </main>
