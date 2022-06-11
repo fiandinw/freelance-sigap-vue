@@ -4,10 +4,33 @@
 </script>
 <template>
   <div
-    class="w-[850px] h-[250px] flex flex-row border-2 border-sigap-primary border-l-0 rounded-r-lg"
+    :class="
+      $route.hash == '#cashback'
+        ? 'w-[850px] h-[250px] flex flex-row border-2 border-[#ffa70b] border-l-0 rounded-r-lg'
+        : 'w-[850px] h-[250px] flex flex-row border-2 border-sigap-primary border-l-0 rounded-r-lg'
+    "
   >
     <div class="relative w-fit">
-      <img class="h-[248px]" :src="cashbackGreen" alt="" />
+      <img
+        v-if="$route.hash == ''"
+        class="h-[248px]"
+        :src="cashbackGreen"
+        alt=""
+      />
+      <div
+        v-if="$route.hash == '#cashback'"
+        style="
+          filter: invert(65%) sepia(44%) saturate(1638%) hue-rotate(353deg)
+            brightness(105%) contrast(101%);
+        "
+      >
+        <img
+          class="h-[248px]"
+          style="filter: brightness(0) saturate(100%)"
+          :src="cashbackGreen"
+          alt=""
+        />
+      </div>
       <div
         v-if="$route.hash == ''"
         class="absolute top-0 left-0 w-full h-full flex items-center justify-center font-lato font-bold text-6xl text-white"
@@ -30,7 +53,7 @@
         v-if="$route.hash == '#cashback'"
         class="font-lato font-bold text-6xl"
       >
-        Voucher <span class="text-sigap-primary">Cashback</span>
+        Voucher <span class="text-[#ffa70b]">Cashback</span>
       </div>
       <div class="mt-8 flex flex-row items-center justify-between">
         <div>
