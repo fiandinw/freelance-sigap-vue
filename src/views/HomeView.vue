@@ -22,7 +22,18 @@
             Project Baru <span class="text-sigap-primary">Diposting</span>
           </div>
         </div>
-        <div>{Carousel Control}</div>
+        <div class="flex flex-row gap-8">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-[100%] bg-white hover:bg-sigap-primary text-sigap-primary hover:text-white shadow-lg"
+          >
+            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+          </div>
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-[100%] bg-white hover:bg-sigap-primary text-sigap-primary hover:text-white shadow-lg"
+          >
+            <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
       <div class="cards mt-16 flex flex-row items-center justify-between">
         <ProjectCard />

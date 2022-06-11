@@ -12,7 +12,12 @@
         <div class="font-poppins font-medium text-2xl">{Name}</div>
         <div class="font-poppins text-xl text-sigap-gray">{Category}</div>
       </div>
-      <div>Arrow Right</div>
+      <div>
+        <i
+          class="fa fa-arrow-right text-sigap-primary fa-2x"
+          aria-hidden="true"
+        ></i>
+      </div>
     </div>
   </div>
 </template>

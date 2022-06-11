@@ -7,20 +7,25 @@
   import sigapbotNatural from "../assets/sigapbotNatural.png";
   import sigapbotLogo from "../assets/sigapbotLogo.png";
   import LandingFeatureButton from "./LandingFeatureButton.vue";
+  import { RouterLink } from "vue-router";
 </script>
 
 <template>
   <div class="flex flex-row items-center justify-between">
-    <LandingFeatureButton
-      :icon="iconPencil"
-      :image="sigapbotHappy"
-      title="Custom Order"
-    />
-    <LandingFeatureButton
-      :icon="iconInstant"
-      :image="sigapbotLogo"
-      title="Instant Order"
-    />
+    <RouterLink :to="{ name: 'customorder' }">
+      <LandingFeatureButton
+        :icon="iconPencil"
+        :image="sigapbotHappy"
+        title="Custom Order"
+      />
+    </RouterLink>
+    <RouterLink :to="{ name: 'instantorder' }">
+      <LandingFeatureButton
+        :icon="iconInstant"
+        :image="sigapbotLogo"
+        title="Instant Order"
+      />
+    </RouterLink>
     <LandingFeatureButton
       :icon="iconFocal"
       :image="sigapbotNatural"

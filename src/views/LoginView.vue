@@ -16,11 +16,13 @@
       <AuthInput type="text" placeholder="Email atau Nomor Ponsel" />
       <AuthInput type="password" placeholder="Password" />
       <div class="self-end">
-        <a class="font-semibold text-sm text-sigap-primary" href=""
-          >Lupa Kata Sandi?</a
+        <RouterLink
+          :to="{ name: 'forgot' }"
+          class="font-semibold text-sm text-sigap-primary"
+          >Lupa Kata Sandi?</RouterLink
         >
       </div>
-      <RouterLink class="w-full" :to="{name: 'home'}">
+      <RouterLink class="w-full" :to="{ name: 'home' }">
         <button
           class="px-6 py-3 bg-sigap-primary rounded-full w-full text-white font-semibold text-2xl"
         >

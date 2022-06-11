@@ -6,13 +6,24 @@
 <template>
   <div class="px-12 py-8 flex items-center justify-center w-full bg-white">
     <div class="container flex flex-row items-center justify-between">
-      <RouterLink :to="{ name: 'home' }">
+      <RouterLink :to="{ name: 'index' }">
         <LogoComponent />
       </RouterLink>
-      <div>search</div>
+      <div class="flex flex-row items-center relative">
+        <input
+          class="border-2 grow border-sigap-primary rounded-l-full border-r-0 px-8"
+          type="text"
+          placeholder="Find Services"
+        />
+        <button
+          class="bg-sigap-primary px-6 py-1 text-white rounded-full font-bold"
+        >
+          Search
+        </button>
+      </div>
       <div class="flex flex-row gap-8">
-        <RouterLink :to="{ name: 'index' }"
-          ><button class="font-bold">Home</button></RouterLink
+        <RouterLink :to="{ name: 'home' }"
+          ><button class="font-bold">Beranda</button></RouterLink
         >
         <RouterLink :to="{ name: 'pricelist' }"
           ><button>Price List</button></RouterLink
@@ -35,26 +46,28 @@
           width="28"
           height="33"
         />
-        <img
-          class="w-[55px] h-[55px] rounded-[100%] object-cover cursor-pointer"
-          src="https://picsum.photos/55/55"
-          alt="profile photo"
-          width="55"
-          height="55"
-        />
+        <RouterLink :to="{ name: 'myprofile' }">
+          <img
+            class="w-[55px] h-[55px] rounded-[100%] object-cover cursor-pointer"
+            src="https://picsum.photos/55/55"
+            alt="profile photo"
+            width="55"
+            height="55"
+          />
+        </RouterLink>
       </div>
     </div>
   </div>
   <div
     class="border-y-[1px] bg-white border-sigap-gray py-2 text-lg flex flex-row items-center justify-evenly"
   >
-    <button>Graphic&Design</button>
-    <button>Videography</button>
-    <button>Animation</button>
-    <button>Programming</button>
-    <button>Digital Marketing</button>
-    <button>Writing&Translation</button>
-    <button>Music&Audio</button>
-    <button>Photography</button>
+    <RouterLink :to="{ name: 'categorylist' }">Graphic&Design</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Videography</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Animation</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Programming</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Digital Marketing</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Writing&Translation</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Music&Audio</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Photography</RouterLink>
   </div>
 </template>

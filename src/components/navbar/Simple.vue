@@ -6,24 +6,32 @@
   <div
     class="bg-white container flex flex-row items-center justify-between rounded-full px-4 py-2 shadow-lg"
   >
-    <a href="#">
+    <RouterLink :to="{ name: 'index' }">
       <LogoComponent />
-    </a>
+    </RouterLink>
 
     <div class="text-sm inline-flex flex-row gap-6 shrink-0">
       <RouterLink :to="{ name: 'home' }">
         <div class="font-bold cursor-pointer">Beranda</div>
       </RouterLink>
-      <div class="cursor-pointer">Tentang</div>
+      <RouterLink :to="{ name: 'about' }">
+        <div class="cursor-pointer">Tentang</div>
+      </RouterLink>
       <RouterLink v-if="$route.name != 'index'" :to="{ name: 'index' }">
         <div class="cursor-pointer">FAQ</div>
       </RouterLink>
       <a v-if="$route.name == 'index'" href="#faq" class="cursor-pointer"
         >FAQ</a
       >
-      <div class="cursor-pointer">Deskripsi</div>
-      <div class="cursor-pointer">Pusat Dukungan</div>
-      <div class="cursor-pointer">Syarat dan Ketentuan</div>
+      <RouterLink :to="{ name: 'landingdesc' }">
+        <div class="cursor-pointer">Deskripsi</div>
+      </RouterLink>
+      <RouterLink :to="{ name: 'supportcenter' }">
+        <div class="cursor-pointer">Pusat Dukungan</div>
+      </RouterLink>
+      <RouterLink :to="{ name: 'tos' }">
+        <div class="cursor-pointer">Syarat dan Ketentuan</div>
+      </RouterLink>
     </div>
 
     <div class="text-sm inline-flex flex-row items-center gap-4">

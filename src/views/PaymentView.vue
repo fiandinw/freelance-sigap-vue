@@ -2,6 +2,7 @@
   import FloatingDescriptionCard from "../components/FloatingDescriptionCard.vue";
   import iconCheckSolid from "../assets/icons/checkSolid.png";
   import FloatingPaymentCard from "../components/FloatingPaymentCard.vue";
+  import FloatingOrderDetailCard from "../components/FloatingOrderDetailCard.vue";
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
@@ -27,28 +28,41 @@
     <article class="container py-16 flex flex-row gap-8">
       <div class="w-7/12">
         <section class="">
-          <div class="border-2 border-sigap-gray p-4">
-            <div class="flex flex-row items-center gap-2">
-              <img :src="iconCheckSolid" alt="check" width="30" height="30" />
-              <div class="text-sigap-gray text-lg">Konsep Desain</div>
+          <div class="p-4 shadow-lg">
+            <div class="font-semibold text-lg border-b-2 py-2 mb-4">
+              Metode Pembayaran
             </div>
-            <div class="flex flex-row items-center gap-2">
-              <img :src="iconCheckSolid" alt="check" width="30" height="30" />
-              <div class="text-sigap-gray text-lg">Vector File</div>
-            </div>
-            <div class="flex flex-row items-center gap-2">
-              <img :src="iconCheckSolid" alt="check" width="30" height="30" />
-              <div class="text-sigap-gray text-lg">Printable File</div>
-            </div>
-            <div class="flex flex-row items-center gap-2">
-              <img :src="iconCheckSolid" alt="check" width="30" height="30" />
-              <div class="text-sigap-gray text-lg">Mockup Logo</div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <input type="radio" name="metode" id="cc" />&nbsp;<label
+                  for="cc"
+                  >Credit Card</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="metode" id="cc" />&nbsp;<label
+                  for="cc"
+                  >E-Wallet</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="metode" id="cc" />&nbsp;<label
+                  for="cc"
+                  >Transfer Bank</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="metode" id="cc" />&nbsp;<label
+                  for="cc"
+                  >COD</label
+                >
+              </div>
             </div>
           </div>
         </section>
       </div>
       <div class="w-5/12 relative flex justify-center">
-        <FloatingPaymentCard />
+        <FloatingOrderDetailCard />
       </div>
     </article>
   </main>

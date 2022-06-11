@@ -3,32 +3,35 @@
 </script>
 <template>
   <div class="floatingCard w-[450px] h-fit bg-white sticky shadow-lg">
-    <div class="grid grid-cols-3">
-      <div
-        class="flex items-center justify-center py-10 border-b-2 border-sigap-primary font-semibold text-2xl text-sigap-primary"
-      >
-        000 K
-      </div>
-      <div
-        class="flex items-center justify-center py-10 border-b-2 border-sigap-primary font-semibold text-2xl text-sigap-primary"
-      >
-        000 K
-      </div>
-      <div
-        class="flex items-center justify-center py-10 border-b-2 border-sigap-primary font-semibold text-2xl text-sigap-primary"
-      >
-        000 K
-      </div>
-    </div>
     <div class="px-8 py-8">
-      <div class="font-semibold text-2xl text-sigap-primary">PAKET {TYPE}</div>
-      <div class="text-lg mt-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quae neque
-        dolores, odio eius alias, voluptatem tempore asperiores voluptas, error
-        quaerat. Ratione porro minus quia dolores sed reprehenderit voluptate
-        voluptatum?
+      <div class="font-semibold text-2xl text-black">Rincian Pembayaran</div>
+      <div class="text-lg mt-4 flex flex-row items-center justify-between">
+        <div>Subtotal</div>
+        <div>Rp. 0K</div>
       </div>
-      <div class="mt-20 flex flex-row items-center justify-between">
+      <div class="text-lg mt-2 flex flex-row items-center justify-between">
+        <div>Biaya Penanganan</div>
+        <div>Rp. 0K</div>
+      </div>
+      <input
+        class="mt-4 border-2 border-sigap-gray w-full rounded-lg p-2"
+        type="text"
+        placeholder="Masukan Voucher"
+      />
+      <div class="text-lg mt-2 flex flex-row items-center justify-between">
+        <div>Total Diskon</div>
+        <div>-Rp. 0K</div>
+      </div>
+      <div class="divider border-t-[1px] border-sigap-gray my-6"></div>
+      <div class="mt-4 flex flex-row items-center justify-between">
+        <div class="font-semibold text-2xl">Total</div>
+        <div class="font-semibold text-2xl text-black line-through">Rp. 0K</div>
+      </div>
+      <div class="mt-4 flex flex-row items-center justify-between">
+        <div class="font-semibold text-2xl"></div>
+        <div class="font-semibold text-2xl text-black">Rp. 0K</div>
+      </div>
+      <div class="mt-12 flex flex-row items-center justify-between">
         <div class="font-semibold text-2xl">Waktu Pengerjaan</div>
         <div class="font-semibold text-2xl text-sigap-primary">0 Hari</div>
       </div>
@@ -37,14 +40,16 @@
         <button
           class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
         >
-          Order Now
+          Bayar
         </button>
       </RouterLink>
-      <button
-        class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
-      >
-        Chat & Nego
-      </button>
+      <RouterLink v-if="$route.name == 'payment'" :to="{ name: 'myorder' }">
+        <button
+          class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
+        >
+          Cek Status Order
+        </button>
+      </RouterLink>
     </div>
   </div>
 </template>

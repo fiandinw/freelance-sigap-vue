@@ -13,11 +13,13 @@
           Buat custom order dan Dapatkan penawaran dari penjual untuk proyek
           Anda
         </div>
-        <button
-          class="font-semibold text-2xl w-full py-4 bg-sigap-primary text-white rounded-full"
-        >
-          Custom Order
-        </button>
+        <RouterLink class="w-full" :to="{ name: 'customorder' }">
+          <button
+            class="font-semibold text-2xl w-full py-4 bg-sigap-primary text-white rounded-full"
+          >
+            Custom Order
+          </button>
+        </RouterLink>
       </div>
       <div class="grow flex items-center justify-center">promo banner</div>
     </section>
@@ -33,8 +35,10 @@
         <RouterLink :to="{ name: 'categorylist' }">
           <div class="flex flex-row items-center gap-8">
             <div class="text-2xl text-sigap-primary">Lihat semua</div>
-            <div class="w-[60px] h-[60px] rounded-[100%] bg-sigap-primary">
-              arrow right
+            <div
+              class="w-[60px] h-[60px] rounded-[100%] bg-white text-sigap-primary shadow-lg hover:bg-sigap-primary hover:text-white flex items-center justify-center"
+            >
+              <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
             </div>
           </div>
         </RouterLink>

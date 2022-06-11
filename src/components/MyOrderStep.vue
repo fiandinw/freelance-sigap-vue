@@ -15,48 +15,60 @@
       <div class="grow grid grid-cols-6 gap-8">
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-check fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Order Dibuat</div>
         </div>
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Pembayaran</div>
         </div>
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-hourglass-half fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Order Proses</div>
         </div>
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Tinjauan</div>
         </div>
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-check fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Selesai</div>
         </div>
         <div class="flex flex-col items-center justify-evenly">
           <div>
-            <div class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary">
-              icon
+            <div
+              class="w-[70px] h-[70px] rounded-[100%] bg-sigap-primary text-white flex items-center justify-center"
+            >
+              <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
             </div>
           </div>
           <div>Feedback</div>

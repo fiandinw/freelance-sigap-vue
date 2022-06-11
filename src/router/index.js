@@ -11,6 +11,14 @@ import PriceListView from '../views/PriceListView.vue'
 import CategoryListView from '../views/CategoryListView.vue'
 import MyListView from '../views/MyListView.vue'
 import MyClaimDiscountView from '../views/MyClaimDiscountView.vue'
+import AboutView from '../views/AboutView.vue'
+import LandingDescView from '../views/LandingDescView.vue'
+import MyProfileView from '../views/MyProfileView.vue'
+import SupportCenterView from '../views/SupportCenterView.vue'
+import TosView from '../views/TosView.vue'
+import CustomOrderView from '../views/CustomOrderView.vue'
+import InstantOrderView from '../views/InstantOrderView.vue'
+import ForgotView from '../views/ForgotView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -71,9 +79,49 @@ const router = createRouter({
       component: MyListView
     },
     {
-      path: '/myclaim/discount',
+      path: '/myclaim',
       name: 'myclaimdiscount',
       component: MyClaimDiscountView
+    },
+    {
+      path: '/tentang',
+      name: 'about',
+      component: AboutView
+    },
+    {
+      path: '/deskripsigap',
+      name: 'landingdesc',
+      component: LandingDescView
+    },
+    {
+      path: '/myprofile',
+      name: 'myprofile',
+      component: MyProfileView
+    },
+    {
+      path: '/pusatdukungan',
+      name: 'supportcenter',
+      component: SupportCenterView
+    },
+    {
+      path: '/syaratketentuan',
+      name: 'tos',
+      component: TosView
+    },
+    {
+      path: '/customorder',
+      name: 'customorder',
+      component: CustomOrderView
+    },
+    {
+      path: '/instantorder',
+      name: 'instantorder',
+      component: InstantOrderView
+    },
+    {
+      path: '/lupaakun',
+      name: 'forgot',
+      component: ForgotView
     },
   ],
   scrollBehavior (to, from, savedPosition) {

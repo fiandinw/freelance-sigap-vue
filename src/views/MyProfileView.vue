@@ -1,0 +1,69 @@
+<script setup>
+  import Profile from "../components/navbar/Profile.vue";
+  import FaqAccordion from "../components/FaqAccordion.vue";
+  import HelpCenterButton from "../components/HelpCenterButton.vue";
+  import iconWhatsapp from "../assets/icons/whatsapp.png";
+</script>
+<template>
+  <div class="w-screen flex flex-row">
+    <Profile />
+    <main v-if="$route.hash == ''" class="p-16 w-9/12">
+      <div class="text-center font-lato text-6xl">My Profile</div>
+      <div>
+        <div
+          class="w-[350px] rounded-lg border-[1px] border-sigap-primary flex flex-col items-center gap-4 p-8"
+        >
+          <img
+            class="w-[100px] h-[100px] rounded-[100%] object-cover"
+            src="https://picsum.photos/50/50"
+            alt="profil"
+            width="100"
+            height="100"
+          />
+          <div class="font-semibold text-2xl">{user}</div>
+          <div class="font-semibold text-sigap-gray text-base">{location}</div>
+          <div class="font-semibold text-sigap-gray text-base">{status}</div>
+        </div>
+      </div>
+    </main>
+    <main v-if="$route.hash == '#help'" class="p-16 w-9/12">
+      <div class="text-center font-lato text-6xl mb-12">Support Center</div>
+      <HelpCenterButton :icon="iconWhatsapp" title="Whatsapp Support Center" />
+    </main>
+    <main v-if="$route.hash == '#faq'" class="p-16 w-9/12 flex flex-col gap-8">
+      <div class="text-center font-lato text-6xl">FAQ</div>
+      <FaqAccordion
+        title="Apa manfaat mengisi lengkap biodata akun pada profile?"
+        content="Kami memiliki komit untuk tingkatan loyalitas kepada customer dengan memberi label tingkatan yang menggambatkan keloyalitasan."
+      />
+      <FaqAccordion
+        title="Apa saja tingkatan loyalitas customer?"
+        content="Silver, Gold, Platinum"
+      />
+      <FaqAccordion
+        title="Apa manfaat tingkatan loyalitas customer?"
+        content="Mendapat posisi strategis pada pembagian voucher diskon atau point."
+      />
+      <FaqAccordion
+        title="Bagaimana jika saya lupa password?"
+        content="Kamu dapat lakukan pengaturan ulang Reset Password dan kemudian masukkan alamat email kamu dengan benar, kemudian kode verifikasi akan dikirimkan ke email kamu."
+      />
+      <FaqAccordion
+        title="Bagaimana cara saya mengubah password?"
+        content="Kamu dapat mengubah password langsung pada bagian profile dan ubah password."
+      />
+      <FaqAccordion
+        title="Apakah boleh mengganti alamat email?"
+        content="Ya. Pastikan alamat email yang kamu ganti adalah alamat email yang aktif."
+      />
+      <FaqAccordion
+        title="Bagaimana jika saya lupa alamat email atau alamat email di-non-aktifkan, dan nomor telepon tidak aktif?"
+        content="Kamu dapat menghubungi Tim Sigap melalui kanal customer service-nya Freelance Sigap."
+      />
+      <FaqAccordion
+        title="Apakah akun saya dapat ditangguhkan atau dihapus permanent oleh Freelance Sigap?"
+        content="Ya. Jika kamu melanggar norma yang ditetapkan oleh Freelance Sigap pada bagian S&K yang tertera."
+      />
+    </main>
+  </div>
+</template>
