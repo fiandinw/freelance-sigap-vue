@@ -37,7 +37,7 @@
           Pekerjakan Freelancer hebat, cepat. <b>Freelance Sigap</b> membantu
           Anda menyewa freelancer profesional dengan cepat
         </div>
-        <RouterLink :to="{ name: 'login' }">
+        <RouterLink :to="{ name: 'pricelist' }">
           <button
             class="text-2xl font-bold text-white bg-sigap-primary w-fit px-20 py-5 rounded-full"
           >
