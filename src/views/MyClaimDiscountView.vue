@@ -3,6 +3,9 @@
   import MyClaimTypeButton from "../components/MyClaimTypeButton.vue";
   import VoucherComponent from "../components/VoucherComponent.vue";
   import { RouterLink } from "vue-router";
+  import iconmoneybag from "../assets/icons/moneybag.png";
+  import iconpricetag from "../assets/icons/pricetag.png";
+  import iconpoin from "../assets/icons/poin.png";
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
@@ -10,13 +13,19 @@
       class="container py-16 flex flex-row items-center justify-center gap-8"
     >
       <RouterLink :to="{ name: 'myclaimdiscount' }">
-        <MyClaimTypeButton icon="fa fa-tags fa-4x" title="Diskon" />
+        <MyClaimTypeButton title="Diskon">
+          <img class="bg-white rounded-[100%]" :src="iconpricetag" alt="" />
+        </MyClaimTypeButton>
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#cashback' }">
-        <MyClaimTypeButton icon="fa fa-money fa-4x" title="Cashback" />
+        <MyClaimTypeButton title="Cashback">
+          <img class="bg-white rounded-[100%]" :src="iconmoneybag" alt="" />
+        </MyClaimTypeButton>
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#point' }">
-        <MyClaimTypeButton icon="fa fa-gg-circle fa-4x" title="Poin" />
+        <MyClaimTypeButton title="Poin">
+          <img :src="iconpoin" alt="" />
+        </MyClaimTypeButton>
       </RouterLink>
     </section>
     <article v-if="$route.hash == ''" class="container">
@@ -69,11 +78,7 @@
         <div class="font-lato text-5xl">Status Point</div>
         <div class="w-full shadow-lg flex flex-row">
           <div class="py-16 w-9/12 font-lato font-bold text-6xl px-20">
-            <i
-              class="fa fa-gg-circle fa-lg text-sigap-primary"
-              aria-hidden="true"
-            ></i
-            >&nbsp;0K
+            <img class="inline-block" :src="iconpoin" alt="" />&nbsp;0K
           </div>
           <div
             class="py-16 bg-sigap-primary text-white font-lato font-bold text-6xl w-3/12 flex items-center justify-center"
