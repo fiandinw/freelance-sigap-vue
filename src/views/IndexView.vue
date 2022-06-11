@@ -12,12 +12,19 @@
   import wave from "../assets/icons/wave.png";
   import iconCheck from "../assets/icons/check.png";
   import LandingFeatureCard from "../components/LandingFeatureCard.vue";
-  import CategoryCard from "../components/CategoryCard.vue";
   import FaqAccordion from "../components/FaqAccordion.vue";
   import EmailSubscription from "../components/EmailSubscription.vue";
   import FeatureButtonGroup from "../components/FeatureButtonGroup.vue";
   import CategoryCardGroup from "../components/CategoryCardGroup.vue";
   import { RouterLink } from "vue-router";
+  import videoLanding from "../assets/video.mp4";
+  import { onMounted, ref } from "vue";
+
+  const videoRef = ref(null);
+
+  onMounted(() => {
+    videoRef.value.play();
+  });
 </script>
 
 <template>
@@ -88,14 +95,23 @@
       </div>
     </section>
 
-    <section class="w-screen h-screen relative bg-black px-16">
+    <section class="w-screen h-screen relative">
       <div
-        class="absolute text-white font-lato text-6xl font-extrabold text-opacity-40 flex flex-col items-start justify-center h-full gap-12"
+        class="absolute px-16 text-white font-lato text-6xl font-extrabold text-opacity-40 flex flex-col items-start justify-center h-full gap-12 bg-black bg-opacity-70 w-full"
       >
         <div>Efficiency Value.</div>
         <div>Make it simple and practical.</div>
         <div>Positive Transactional.</div>
       </div>
+      <video
+        class="w-full h-full object-cover"
+        ref="videoRef"
+        :src="videoLanding"
+        muted
+        loop
+      >
+        video not supported
+      </video>
     </section>
 
     <section class="container py-16">
