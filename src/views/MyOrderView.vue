@@ -7,7 +7,7 @@
   <main class="relative flex flex-col items-center px-12">
     <div v-if="$route.hash == ''" class="mt-12 flex flex-row gap-12">
       <div
-        class="text-center font-lato font-bold text-4xl border-b-2 cursor-pointer"
+        class="text-center font-lato font-bold text-4xl border-b-4 border-sigap-primary pb-2 cursor-pointer"
       >
         My Order
       </div>
@@ -24,7 +24,7 @@
         </div>
       </RouterLink>
       <div
-        class="text-center font-lato font-bold text-4xl border-b-2 cursor-pointer"
+        class="text-center font-lato font-bold text-4xl border-b-4 border-sigap-primary pb-2 cursor-pointer"
       >
         Request Order
       </div>
