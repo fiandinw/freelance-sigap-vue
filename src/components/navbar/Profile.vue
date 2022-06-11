@@ -47,7 +47,7 @@
       <div
         class="cursor-pointer absolute bottom-0 right-0 m-8 font-semibold text-2xl"
       >
-        Keluar
+        Keluar&nbsp;<i class="fa fa-power-off fa-lg" aria-hidden="true"></i>
       </div>
     </RouterLink>
   </nav>

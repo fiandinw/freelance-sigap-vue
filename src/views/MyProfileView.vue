@@ -9,21 +9,114 @@
     <Profile />
     <main v-if="$route.hash == ''" class="p-16 w-9/12">
       <div class="text-center font-lato text-6xl">My Profile</div>
-      <div>
+      <div class="flex flex-row justify-evenly mt-12">
         <div
           class="w-[350px] rounded-lg border-[1px] border-sigap-primary flex flex-col items-center gap-4 p-8"
         >
-          <img
-            class="w-[100px] h-[100px] rounded-[100%] object-cover"
-            src="https://picsum.photos/50/50"
-            alt="profil"
-            width="100"
-            height="100"
-          />
-          <div class="font-semibold text-2xl">{user}</div>
-          <div class="font-semibold text-sigap-gray text-base">{location}</div>
-          <div class="font-semibold text-sigap-gray text-base">{status}</div>
+          <div class="flex flex-col items-center gap-4">
+            <img
+              class="w-[100px] h-[100px] rounded-[100%] object-cover"
+              src="https://picsum.photos/50/50"
+              alt="profil"
+              width="100"
+              height="100"
+            />
+            <div class="font-semibold text-2xl">{user}</div>
+            <div class="font-semibold text-sigap-gray text-base">
+              {location}
+            </div>
+            <div class="font-semibold text-sigap-gray text-base">{status}</div>
+          </div>
+          <div
+            class="font-semibold text-lg text-sigap-primary border-t-2 w-full flex items-center justify-center pt-4 cursor-pointer"
+          >
+            Upload Picture
+          </div>
         </div>
+        <div
+          class="w-[550px] rounded-lg border-[1px] border-sigap-primary flex flex-col items-center py-4 gap-4"
+        >
+          <div>&nbsp;</div>
+          <div class="grow border-y-2 w-full px-4 flex flex-col gap-2 py-4">
+            <div class="flex flex-row gap-8">
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Nama Depan</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Nama Depan</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+            </div>
+            <div class="flex flex-row gap-8">
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Alamat Email</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Nomor Telepon</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+            </div>
+            <div class="flex flex-row gap-8">
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Provinsi</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+              <div class="flex flex-col w-1/2">
+                <label for="firstname">Kota</label>
+                <input
+                  class="border-[1px] border-sigap-gray rounded-lg p-2"
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex justify-end px-8">
+            <button
+              class="bg-sigap-primary text-white font-semibold text-lg px-4 py-2 rounded-lg"
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-row justify-evenly">
+        <button class="px-4 py-2 rounded-lg border-[1px] text-lg">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i
+          >&nbsp;Connect With Facebook
+        </button>
+        <button class="px-4 py-2 rounded-lg border-[1px] text-lg">
+          <i class="fa fa-google" aria-hidden="true"></i>&nbsp;Connect With
+          Google
+        </button>
       </div>
     </main>
     <main v-if="$route.hash == '#help'" class="p-16 w-9/12">
