@@ -1,23 +1,52 @@
 <script setup>
+  import { RouterLink } from "vue-router";
   import MyOrderStep from "../components/MyOrderStep.vue";
+  import MyCustomOrder from "../components/MyCustomOrder.vue";
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
-    <div class="mt-12 flex flex-row gap-12">
-      <div class="text-center font-lato font-bold text-4xl cursor-pointer">
+    <div v-if="$route.hash == ''" class="mt-12 flex flex-row gap-12">
+      <div
+        class="text-center font-lato font-bold text-4xl border-b-2 cursor-pointer"
+      >
         My Order
       </div>
-      <div class="text-center font-lato font-bold text-4xl cursor-pointer">
+      <RouterLink :to="{ name: 'myorder', hash: '#request' }">
+        <div class="text-center font-lato font-bold text-4xl cursor-pointer">
+          Request Order
+        </div>
+      </RouterLink>
+    </div>
+    <div v-if="$route.hash == '#request'" class="mt-12 flex flex-row gap-12">
+      <RouterLink :to="{ name: 'myorder' }">
+        <div class="text-center font-lato font-bold text-4xl cursor-pointer">
+          My Order
+        </div>
+      </RouterLink>
+      <div
+        class="text-center font-lato font-bold text-4xl border-b-2 cursor-pointer"
+      >
         Request Order
       </div>
     </div>
-    <section class="container py-16">
+    <section v-if="$route.hash == ''" class="container py-16">
       <div class="font-semibold text-2xl mb-8">Ongoing</div>
       <MyOrderStep />
     </section>
-    <section class="container py-16">
+    <section v-if="$route.hash == ''" class="container py-16">
       <div class="font-semibold text-2xl mb-8">Previous</div>
       <MyOrderStep />
+    </section>
+
+    <section class="container py-16 flex flex-row items-center justify-evenly">
+      <div>
+        <div class="font-lato font-bold text-4xl mb-4">Latest</div>
+        <MyCustomOrder />
+      </div>
+      <div>
+        <div class="font-lato font-bold text-4xl mb-4">Previous</div>
+        <MyCustomOrder />
+      </div>
     </section>
   </main>
 </template>
