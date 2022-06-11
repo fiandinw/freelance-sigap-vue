@@ -1,3 +1,6 @@
+<script setup>
+  import router from "../router";
+</script>
 <template>
   <div
     class="card w-[420px] h-[420px] px-14 shadow-lg rounded-3xl grid grid-rows-3"
@@ -17,6 +20,11 @@
         </div>
       </div>
       <button
+        @click="
+          () => {
+            router.push({ name: 'description' });
+          }
+        "
         class="absolute -right-6 font-semibold text-lg text-white bg-sigap-primary px-6 py-1 rounded-full"
       >
         Apply Now

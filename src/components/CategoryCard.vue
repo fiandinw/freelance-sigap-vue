@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from "vue";
+  import router from "../router";
 
   defineProps(["image", "title"]);
 
@@ -8,10 +9,15 @@
   const onHover = () => {
     isHover.value = !isHover.value;
   };
+
+  const onClick = () => {
+    router.push({ name: "categorylist" });
+  };
 </script>
 
 <template>
   <div
+    @click="onClick"
     @pointerenter="onHover"
     @pointerleave="onHover"
     class="card w-72 h-60 rounded-3xl bg-sigap-gray overflow-hidden flex items-center justify-center relative cursor-pointer"

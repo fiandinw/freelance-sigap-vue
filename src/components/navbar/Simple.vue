@@ -1,6 +1,6 @@
 <script setup>
-import { RouterLink } from "vue-router";
-import LogoComponent from "../LogoComponent.vue";
+  import { RouterLink } from "vue-router";
+  import LogoComponent from "../LogoComponent.vue";
 </script>
 <template>
   <div
@@ -11,17 +11,34 @@ import LogoComponent from "../LogoComponent.vue";
     </a>
 
     <div class="text-sm inline-flex flex-row gap-6 shrink-0">
-      <div class="font-bold cursor-pointer">Beranda</div>
+      <RouterLink :to="{ name: 'home' }">
+        <div class="font-bold cursor-pointer">Beranda</div>
+      </RouterLink>
       <div class="cursor-pointer">Tentang</div>
-      <div class="cursor-pointer">FAQ</div>
+      <RouterLink v-if="$route.name != 'index'" :to="{ name: 'index' }">
+        <div class="cursor-pointer">FAQ</div>
+      </RouterLink>
+      <a v-if="$route.name == 'index'" href="#faq" class="cursor-pointer"
+        >FAQ</a
+      >
       <div class="cursor-pointer">Deskripsi</div>
       <div class="cursor-pointer">Pusat Dukungan</div>
       <div class="cursor-pointer">Syarat dan Ketentuan</div>
     </div>
 
     <div class="text-sm inline-flex flex-row items-center gap-4">
-      <RouterLink :to="{name: 'register'}"><button class="font-semibold cursor-pointer">DAFTAR</button></RouterLink>
-      <RouterLink :to="{name: 'login'}"><button class="font-bold text-white bg-sigap-primary rounded-full px-6 py-1 cursor-pointer">MASUK</button></RouterLink>
+      <RouterLink :to="{ name: 'register' }"
+        ><button class="font-semibold cursor-pointer">
+          DAFTAR
+        </button></RouterLink
+      >
+      <RouterLink :to="{ name: 'login' }"
+        ><button
+          class="font-bold text-white bg-sigap-primary rounded-full px-6 py-1 cursor-pointer"
+        >
+          MASUK
+        </button></RouterLink
+      >
     </div>
   </div>
 </template>

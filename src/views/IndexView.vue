@@ -109,7 +109,7 @@
       <CategoryCardGroup />
     </section>
 
-    <section class="container py-16">
+    <section id="faq" class="container py-16">
       <div class="font-lato font-bold text-5xl w-full text-center">FAQ</div>
       <div class="flex flex-col mt-14 gap-8">
         <FaqAccordion title="" content="" />

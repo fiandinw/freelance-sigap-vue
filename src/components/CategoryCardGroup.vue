@@ -4,27 +4,27 @@
 <template>
   <div class="flex flex-wrap gap-y-14 gap-x-8 justify-between">
     <CategoryCard
-      image="https://picsum.photos/300/250"
+      image="https://picsum.photos/100/100"
       title="Graphic&Design"
     />
     <CategoryCard
-      image="https://picsum.photos/300/251"
+      image="https://picsum.photos/100/100"
       title="Cartoon Animation"
     />
-    <CategoryCard image="https://picsum.photos/300/252" title="Illustration" />
+    <CategoryCard image="https://picsum.photos/100/100" title="Illustration" />
     <CategoryCard
-      image="https://picsum.photos/300/253"
+      image="https://picsum.photos/100/100"
       title="Flyers & Vouchers"
     />
-    <CategoryCard image="https://picsum.photos/300/254" title="Logo Design" />
+    <CategoryCard image="https://picsum.photos/100/100" title="Logo Design" />
     <CategoryCard
-      image="https://picsum.photos/300/255"
+      image="https://picsum.photos/100/100"
       title="Social graphics"
     />
     <CategoryCard
-      image="https://picsum.photos/300/256"
+      image="https://picsum.photos/100/100"
       title="Article writing"
     />
-    <CategoryCard image="https://picsum.photos/300/257" title="Video Editing" />
+    <CategoryCard image="https://picsum.photos/100/100" title="Video Editing" />
   </div>
 </template>

@@ -1,7 +1,8 @@
 <template>
   <div class="card w-[350px] rounded-2xl overflow-hidden shadow-lg">
     <img
-      src="https://picsum.photos/350/350"
+      class="w-[350px] h-[350px] object-cover"
+      src="https://picsum.photos/100/100"
       alt="freelancer profil"
       width="350"
       height="350"
