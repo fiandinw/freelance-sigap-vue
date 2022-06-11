@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+[ ] tambah pilihan freelance di instant order
+[ ] paket di instant order setelah

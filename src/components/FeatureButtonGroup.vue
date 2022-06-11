@@ -26,12 +26,13 @@
         title="Instant Order"
       />
     </RouterLink>
-    <LandingFeatureButton
-      v-if="$route.name == 'index'"
-      :icon="iconFocal"
-      :image="sigapbotNatural"
-      title="Main Profile"
-    />
+    <RouterLink v-if="$route.name == 'index'" :to="{ name: 'login' }">
+      <LandingFeatureButton
+        :icon="iconFocal"
+        :image="sigapbotNatural"
+        title="Main Profile"
+      />
+    </RouterLink>
     <RouterLink v-if="$route.name == 'home'" :to="{ name: 'myorder' }">
       <LandingFeatureButton
         :icon="iconFocal"
