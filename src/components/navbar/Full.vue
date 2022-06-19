@@ -16,7 +16,7 @@
           placeholder="Find Services"
         />
         <button
-          class="bg-sigap-primary px-6 py-1 text-white rounded-full font-bold"
+          class="bg-sigap-primary px-6 py-1 text-white rounded-full font-bold absolute -right-16"
         >
           Search
         </button>
