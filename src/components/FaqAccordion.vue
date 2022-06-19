@@ -19,7 +19,7 @@
           : 'border-2 border-sigap-gray rounded-lg shadow-lg text-2xl font-semibold flex flex-row px-8 py-2 items-center transition-all duration-300 cursor-pointer'
       "
     >
-      <div class="grow">{{ $props.title }}</div>
+      <div class="grow text-sigap-primary">{{ $props.title }}</div>
       <img
         :class="
           isOpen

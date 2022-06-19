@@ -6,20 +6,20 @@
           <span class="text-sigap-primary font-extrabold">Freelance</span> Sigap
         </div>
         <div class="font-poppins text-lg">
-          Powerful Freelance Marketplace System with ability to change the Users
-          (Freelancers & Clients)
+          Pekerjakan Freelancer hebat, cepat. Freelance Sigap membantu
+          Anda menyewa freelancer profesional dengan cepat
         </div>
         <div class="flex flex-row items-center gap-2">
           <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
           <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
         </div>
       </div>
-      <div>
+      <div class="lg:pl-16">
         <div class="font-poppins font-medium text-2xl">For Clients</div>
         <div class="mt-8">
           <ul>
             <li>Find Freelancers</li>
-            <li>Post Project</li>
+            <li>Status Order</li>
             <li>Refund Policy</li>
             <li>Privacy Policy</li>
           </ul>

@@ -80,10 +80,10 @@
 
     <section class="container py-16 flex flex-row gap-16">
       <img :src="landingGirl" alt="Good" width="431" height="589" />
-      <div class="grow flex flex-col gap-16">
-        <div class="font-lato text-5xl font-bold text-right self-end">
-          Carilah
-          <span class="text-sigap-primary">Freelancer<br />Terbaik</span> disini
+      <div class="grow flex flex-col gap-8">
+        <div class="font-lato text-5xl font-bold text-left self-start uppercase">
+          <span class="text-4xl">Kenapa Harus</span><br/>
+          <span class="text-sigap-primary">Freelance Sigap?</span>
         </div>
         <div class="h-full max-w-2xl flex flex-row gap-8 flex-wrap">
           <LandingFeatureCard :icon="discountMedal" title="Money Guarantee" />
