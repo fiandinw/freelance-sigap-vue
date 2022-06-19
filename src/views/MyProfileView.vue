@@ -3,6 +3,49 @@
   import FaqAccordion from "../components/FaqAccordion.vue";
   import HelpCenterButton from "../components/HelpCenterButton.vue";
   import iconWhatsapp from "../assets/icons/whatsapp.png";
+  import { ref } from "vue";
+  import {
+    doc,
+    getFirestore,
+    onSnapshot,
+    updateDoc,
+  } from "@firebase/firestore";
+  import swal from "sweetalert";
+
+  const customerId = "c8txMBcP0JqRil0vJquS";
+  const customerProfile = ref({
+    username: "",
+    email: "",
+    password: "",
+    phone: "",
+  });
+
+  const db = getFirestore();
+
+  const getCustomerData = () => {
+    const docref = doc(db, "customer", customerId);
+    onSnapshot(docref, (doc) => {
+      //console.log(doc.data());
+      const resData = doc.data();
+      customerProfile.value.username = resData.username;
+      customerProfile.value.email = resData.email;
+      customerProfile.value.password = resData.password;
+      customerProfile.value.phone = resData.phone;
+    });
+  };
+  getCustomerData();
+
+  const handleSubmit = () => {
+    const docref = doc(db, "customer", customerId);
+    updateDoc(docref, {
+      username: customerProfile.value.username,
+      email: customerProfile.value.email,
+      password: customerProfile.value.password,
+      phone: customerProfile.value.phone,
+    }).then(() => {
+      swal("Simpan Berhasil", "Data Berhasil Diubah", "success");
+    });
+  };
 </script>
 <template>
   <div class="w-screen flex flex-row">
@@ -21,11 +64,13 @@
               width="100"
               height="100"
             />
-            <div class="font-semibold text-2xl">{user}</div>
-            <div class="font-semibold text-sigap-gray text-base">
+            <div class="font-semibold text-2xl mb-20">
+              {{ customerProfile.username }}
+            </div>
+            <!-- <div class="font-semibold text-sigap-gray text-base">
               {location}
             </div>
-            <div class="font-semibold text-sigap-gray text-base">{status}</div>
+            <div class="font-semibold text-sigap-gray text-base">{status}</div> -->
           </div>
           <div
             class="font-semibold text-lg text-sigap-primary border-t-2 w-full flex items-center justify-center pt-4 cursor-pointer"
@@ -40,45 +85,45 @@
           <div class="grow border-y-2 w-full px-4 flex flex-col gap-2 py-4">
             <div class="flex flex-row gap-8">
               <div class="flex flex-col w-1/2">
-                <label for="firstname">Nama Depan</label>
+                <label for="username">Username</label>
                 <input
+                  v-model="customerProfile.username"
                   class="border-[1px] border-sigap-gray rounded-lg p-2"
                   type="text"
-                  id="firstname"
-                  name="firstname"
+                  id="username"
                 />
               </div>
               <div class="flex flex-col w-1/2">
-                <label for="firstname">Nama Depan</label>
+                <label for="email">Email</label>
                 <input
+                  v-model="customerProfile.email"
                   class="border-[1px] border-sigap-gray rounded-lg p-2"
                   type="text"
-                  id="firstname"
-                  name="firstname"
+                  id="email"
                 />
               </div>
             </div>
             <div class="flex flex-row gap-8">
               <div class="flex flex-col w-1/2">
-                <label for="firstname">Alamat Email</label>
+                <label for="password">Password</label>
                 <input
+                  v-model="customerProfile.password"
                   class="border-[1px] border-sigap-gray rounded-lg p-2"
-                  type="text"
-                  id="firstname"
-                  name="firstname"
+                  type="password"
+                  id="password"
                 />
               </div>
               <div class="flex flex-col w-1/2">
-                <label for="firstname">Nomor Telepon</label>
+                <label for="phone">Nomor Telepon</label>
                 <input
+                  v-model="customerProfile.phone"
                   class="border-[1px] border-sigap-gray rounded-lg p-2"
-                  type="text"
-                  id="firstname"
-                  name="firstname"
+                  type="number"
+                  id="phone"
                 />
               </div>
             </div>
-            <div class="flex flex-row gap-8">
+            <!-- <div class="flex flex-row gap-8">
               <div class="flex flex-col w-1/2">
                 <label for="firstname">Provinsi</label>
                 <input
@@ -97,10 +142,11 @@
                   name="firstname"
                 />
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="w-full flex justify-end px-8">
             <button
+              @click="handleSubmit"
               class="bg-sigap-primary text-white font-semibold text-lg px-4 py-2 rounded-lg"
             >
               Simpan
