@@ -81,8 +81,10 @@
     <section class="container py-16 flex flex-row gap-16">
       <img :src="landingGirl" alt="Good" width="431" height="589" />
       <div class="grow flex flex-col gap-8">
-        <div class="font-lato text-5xl font-bold text-left self-start uppercase">
-          <span class="text-4xl">Kenapa Harus</span><br/>
+        <div
+          class="font-lato text-5xl font-bold text-left self-start uppercase"
+        >
+          <span class="text-4xl">Kenapa Harus</span><br />
           <span class="text-sigap-primary">Freelance Sigap?</span>
         </div>
         <div class="h-full max-w-2xl flex flex-row gap-8 flex-wrap">
@@ -139,10 +141,21 @@
           title="Ada berapa cara order di Freelance Sigap?"
           content="Terdapat 2 cara order, yakni Instant Order dan Custom Order."
         />
-        <FaqAccordion
-          title="Bagaimana cara order di Freelance Sigap?"
-          content="1. Pada Instan Order, calon customer harus melakukan login atau sign up terlebih dahulu, kemudian nanti mengisi e-formulir yang sudah tersedia, harga jasa menyesuaikan jenis jasa, kualitas atau kelas freelancer, dan kecepatan pengerjaan. 2. Pada Custom Order, calon customer tidak perlu login atau signup terlebih dahulu, dan calon customer bebas menentukan budget untuk membayar jasa freelancer."
-        />
+        <FaqAccordion title="Bagaimana cara order di Freelance Sigap?">
+          <ol class="list-decimal">
+            <li>
+              Pada Instan Order, calon customer harus melakukan login atau sign
+              up terlebih dahulu, kemudian nanti mengisi e-formulir yang sudah
+              tersedia, harga jasa menyesuaikan jenis jasa, kualitas atau kelas
+              freelancer, dan kecepatan pengerjaan.
+            </li>
+            <li class="mt-4">
+              Pada Custom Order, calon customer tidak perlu login atau signup
+              terlebih dahulu, dan calon customer bebas menentukan budget untuk
+              membayar jasa freelancer.
+            </li>
+          </ol>
+        </FaqAccordion>
         <FaqAccordion
           title="Apakah di Freelance Sigap terdapat fitur negosiasi?"
           content="Ya, fitur tersebut bernama Chat and Nego."

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "sigap-primary": '#41916c',
+        "sigap-primary": '#a2d2ff',
         "sigap-gray": '#9D9D9D',
         "sigap-light": '#f2fafa',
       },

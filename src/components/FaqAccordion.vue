@@ -39,7 +39,7 @@
           : 'h-0 overflow-hidden text-xl px-0 py-0 border-0 border-t-0 border-sigap-gray rounded-b-none transition-all duration-300'
       "
     >
-      {{ $props.content }}
+      <slot>{{ $props.content }}</slot>
     </div>
   </div>
 </template>
