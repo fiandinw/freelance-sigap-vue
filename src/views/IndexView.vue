@@ -94,12 +94,38 @@
           <span class="text-4xl">Kenapa Harus</span><br />
           <span class="text-sigap-primary">aglees?</span>
         </div>
-        <div class="h-full max-w-2xl flex flex-row gap-8 flex-wrap">
-          <LandingFeatureCard :icon="discountMedal" title="Money Guarantee" />
-          <LandingFeatureCard :icon="wallet" title="Safe Transaction" />
-          <LandingFeatureCard :icon="iconTime" title="Efficient" />
-          <LandingFeatureCard :icon="wave" title="Flexible" />
-          <LandingFeatureCard :icon="iconCheck" title="Good Service" />
+        <div class="h-full max-w-2xl grid grid-cols-3 relative">
+          <div>
+            <LandingFeatureCard
+              class="z-40"
+              :icon="discountMedal"
+              title="Money Guarantee"
+            />
+          </div>
+          <div>
+            <LandingFeatureCard
+              class="z-40"
+              :icon="wallet"
+              title="Safe Transaction"
+            />
+          </div>
+          <div>
+            <LandingFeatureCard
+              class="z-40"
+              :icon="iconTime"
+              title="Efficient"
+            />
+          </div>
+          <div>
+            <LandingFeatureCard class="z-30" :icon="wave" title="Flexible" />
+          </div>
+          <div>
+            <LandingFeatureCard
+              class="z-30"
+              :icon="iconCheck"
+              title="Good Service"
+            />
+          </div>
         </div>
       </div>
     </section>
