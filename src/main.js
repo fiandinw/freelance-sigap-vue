@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import '@splidejs/vue-splide/css';
 import './index.css'
 
 

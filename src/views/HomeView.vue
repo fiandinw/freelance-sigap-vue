@@ -4,6 +4,7 @@
   import CategoryCardGroup from "../components/CategoryCardGroup.vue";
   import ProjectCard from "../components/ProjectCard.vue";
   import PortfolioCard from "../components/PortfolioCard.vue";
+  import { Splide, SplideSlide } from "@splidejs/vue-splide";
 </script>
 
 <template>
@@ -35,10 +36,24 @@
           </div>
         </div>
       </div>
-      <div class="cards mt-16 flex flex-row items-center justify-between">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+      <div class="cards mt-16">
+        <Splide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </SplideSlide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </SplideSlide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </SplideSlide>
+        </Splide>
       </div>
     </section>
 
@@ -56,10 +71,24 @@
       <div class="font-lato font-bold text-6xl text-center">
         Lihat <span class="text-sigap-primary">Portfolio</span> Terbaik Disini!
       </div>
-      <div class="mt-20 flex flex-row items-center justify-between">
-        <PortfolioCard />
-        <PortfolioCard />
-        <PortfolioCard />
+      <div class="mt-20">
+        <Splide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
+          </SplideSlide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
+          </SplideSlide>
+          <SplideSlide class="flex flex-row items-center justify-between p-8">
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
+          </SplideSlide>
+        </Splide>
       </div>
     </section>
 
