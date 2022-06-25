@@ -2,6 +2,7 @@
   import LogoComponent from "../LogoComponent.vue";
   import iconBell from "../../assets/icons/bell.png";
   import { RouterLink } from "vue-router";
+  import { Icon } from "@iconify/vue";
 </script>
 <template>
   <div class="px-12 py-8 flex items-center justify-center w-full bg-white">
@@ -39,12 +40,16 @@
         >
       </div>
       <div class="flex flex-row items-center gap-8">
-        <img
+        <!-- <img
           class="cursor-pointer"
           :src="iconBell"
           alt="bell"
           width="28"
           height="33"
+        /> -->
+        <Icon
+          class="text-sigap-primary text-4xl"
+          icon="ic:baseline-notifications"
         />
         <RouterLink :to="{ name: 'myprofile' }">
           <img

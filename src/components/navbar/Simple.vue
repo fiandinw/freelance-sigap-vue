@@ -6,7 +6,7 @@
   <div
     class="bg-white container flex flex-row items-center justify-between rounded-full px-4 py-2 shadow-lg"
   >
-    <RouterLink :to="{ name: 'index' }">
+    <RouterLink class="ml-2" :to="{ name: 'index' }">
       <LogoComponent />
     </RouterLink>
 

@@ -11,6 +11,7 @@
     updateDoc,
   } from "@firebase/firestore";
   import swal from "sweetalert";
+  import { RouterLink } from "vue-router";
 
   const customerId = "c8txMBcP0JqRil0vJquS";
   const customerProfile = ref({
@@ -201,8 +202,15 @@
       />
       <FaqAccordion
         title="Apakah akun saya dapat ditangguhkan atau dihapus permanent oleh Freelance Sigap?"
-        content="Ya. Jika kamu melanggar norma yang ditetapkan oleh Freelance Sigap pada bagian S&K yang tertera."
-      />
+        >Ya. Jika kamu melanggar norma yang ditetapkan oleh Freelance Sigap pada
+        bagian
+        <RouterLink
+          class="text-sigap-primary font-semibold"
+          :to="{ name: 'tos' }"
+          >S&K</RouterLink
+        >
+        yang tertera.</FaqAccordion
+      >
     </main>
   </div>
 </template>

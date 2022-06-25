@@ -1,10 +1,19 @@
 <script setup>
+  import { ref } from "vue";
+
   defineProps(["icon", "title"]);
+  const isHover = ref(false);
+  const toggleHover = () => {
+    isHover.value = !isHover.value;
+    console.log("hover");
+  };
 </script>
 
 <template>
   <div
-    class="card flex flex-col gap-2 items-center w-48 h-44 p-4 rounded-lg bg-white shadow-[0_14px_37px_0px_rgba(0,0,0,0.1)] hover:scale-125 transition-all duration-300"
+    @mouseenter="toggleHover"
+    @mouseleave="toggleHover"
+    class="card flex flex-col gap-2 items-center w-48 h-fit p-4 rounded-lg bg-white shadow-[0_14px_37px_0px_rgba(0,0,0,0.1)] hover:scale-125 transition-all duration-300"
   >
     <img
       class="min-h-[70px] object-contain"
@@ -15,6 +24,17 @@
     />
     <div class="font-lato text-2xl text-center h-full flex items-center">
       {{ $props.title }}
+    </div>
+    <div
+      :class="
+        isHover
+          ? 'block transition-all duration-300'
+          : 'hidden transition-all duration-300'
+      "
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iste,
+      unde quasi ex, velit vero, aut commodi ea est soluta dolore explicabo
+      numquam? Ipsa voluptate veniam dolor numquam! Labore, odio!
     </div>
   </div>
 </template>
