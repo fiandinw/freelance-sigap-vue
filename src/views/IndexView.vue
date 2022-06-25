@@ -28,11 +28,18 @@
 </script>
 
 <template>
-  <img
+  <!-- <img
     class="w-full absolute top-0"
     :src="landingBG"
     alt="Landing Background"
-  />
+  /> -->
+  <div
+    class="w-screen h-screen absolute top-0 left-0 bg-gradient-to-tl from-sigap-primary to-gray-50"
+  >
+    <div
+      class="w-full h-full bg-gradient-to-t from-white via-transparent to-transparent"
+    ></div>
+  </div>
 
   <main class="relative flex flex-col items-center px-12">
     <section class="container flex flex-row py-16">
@@ -41,8 +48,8 @@
           Apakah anda sedang mencari freelancers?
         </div>
         <div class="text-2xl text-opacity-60 text-black">
-          Pekerjakan Freelancer hebat, cepat. <b>Freelance Sigap</b> membantu
-          Anda menyewa freelancer profesional dengan cepat
+          Pekerjakan Freelancer hebat, cepat. <b>aglees</b> membantu Anda
+          menyewa freelancer profesional dengan cepat
         </div>
         <RouterLink :to="{ name: 'pricelist' }">
           <button
@@ -74,7 +81,7 @@
       <LandingStepCard
         :icon="iconGuard"
         title="Bayar"
-        desc="Jaminan pembayaran freelance sigap aman 100%"
+        desc="Jaminan pembayaran aglees aman 100%"
       />
     </section>
 
@@ -85,7 +92,7 @@
           class="font-lato text-5xl font-bold text-left self-start uppercase"
         >
           <span class="text-4xl">Kenapa Harus</span><br />
-          <span class="text-sigap-primary">Freelance Sigap?</span>
+          <span class="text-sigap-primary">aglees?</span>
         </div>
         <div class="h-full max-w-2xl flex flex-row gap-8 flex-wrap">
           <LandingFeatureCard :icon="discountMedal" title="Money Guarantee" />
@@ -134,14 +141,14 @@
       <div class="font-lato font-bold text-5xl w-full text-center">FAQ</div>
       <div class="flex flex-col mt-14 gap-8">
         <FaqAccordion
-          title="Apa keunggulan menggunakan Freelance Sigap?"
+          title="Apa keunggulan menggunakan aglees?"
           content="Kami memegang erat pada konsep efisiensi waktu dan harga. Selain itu profesionalitas freelancer dijunjung tinggi dan kami bertekad untuk menghadirkan fitur custom order untuk memberi ruang kepada freelancer kelas newbie untuk menjemput order calon customer juga kepada customer untuk bebas menentukan budget di fitur ini."
         />
         <FaqAccordion
-          title="Ada berapa cara order di Freelance Sigap?"
+          title="Ada berapa cara order di aglees?"
           content="Terdapat 2 cara order, yakni Instant Order dan Custom Order."
         />
-        <FaqAccordion title="Bagaimana cara order di Freelance Sigap?">
+        <FaqAccordion title="Bagaimana cara order di aglees?">
           <ol class="list-decimal">
             <li>
               Pada Instan Order, calon customer harus melakukan login atau sign
@@ -157,19 +164,19 @@
           </ol>
         </FaqAccordion>
         <FaqAccordion
-          title="Apakah di Freelance Sigap terdapat fitur negosiasi?"
+          title="Apakah di aglees terdapat fitur negosiasi?"
           content="Ya, fitur tersebut bernama Chat and Nego."
         />
         <FaqAccordion
-          title="Apakah di Freelance Sigap dapat mencicil?"
+          title="Apakah di aglees dapat mencicil?"
           content="Ya, ada metode pembayaran mencicil sebanyak 2 kali. Termin 1 membayar sebesar minimal 20%. Termin 2 membayar sisa dari pembayaran termin 1. Metode pembayaran ini berlaku untuk custom order saja."
         />
         <FaqAccordion
-          title="Apakah di Freelance Sigap dapat CoD?"
+          title="Apakah di aglees dapat CoD?"
           content="Ya, ada metode pembayaran Cash on Delivery untuk calon customer yang tidak memiliki E-Wallet/Bank/Debit dan dapat dijangkau jaraknya. Untuk Cash on Delivery terdapat biaya penanganan sebesar Rp 5.000."
         />
         <FaqAccordion
-          title="Bagaimana ketentuan transaksi di Freelance Sigap?"
+          title="Bagaimana ketentuan transaksi di aglees?"
           content="Calon customer harus memperhatikan syarat dan ketentuan order yang tertera pada Terms and Condition sebelum melakukan order. Semua bentuk persetujuan dari calon customer dianggap sebagai hal yang absah. Terkait kebijakan pembatalan order dari calon customer merupakan tanggung jawab dari calon customer, jika sebaliknya di tengah proyek berjalan dari pihak freelancer terdapat keterlambatan, maka calon customer dapat mengklaim garansi berupa uang kembali 100% atau proyek dialihkan kepada freelancer lain."
         />
         <FaqAccordion
@@ -177,8 +184,8 @@
           content="Calon customer harus melakukan login atau signup terlebih dahulu. Di sebelah profile calon customer terdapat My Claim dan di sana akan diarahkan kepada support center untuk teknis klaim. Jika calon customer tidak membuat akun, maka klaim garansi tidak berlaku kecuali memiliki rekam jejak transaksi."
         />
         <FaqAccordion
-          title="Apakah di Freelance Sigap terdapat voucher diskon?"
-          content="Ya. Voucher diskon didapatkan dari mengisi review feedback setelah order dan event-event Freelance Sigap."
+          title="Apakah di aglees terdapat voucher diskon?"
+          content="Ya. Voucher diskon didapatkan dari mengisi review feedback setelah order dan event-event aglees."
         />
         <FaqAccordion
           title="Bagaimana cara klaim voucher diskon?"
@@ -189,15 +196,15 @@
           content="Jika terdapat request di tengah berjalannya proyek, hal tersebut diukur oleh bobot permintaan. Jika permintaannya dalam kategori besar, dimungkinkan freelancer akan memberi tagihan pembayaran tambahan. Jika permintaannya hanya sebagian kecil, dimungkinkan freelancer memberi free paid."
         />
         <FaqAccordion
-          title="Berapa harga untuk membeli jasa di Freelance Sigap?"
-          content="Rate harga di Freelance Sigap mulai dari Rp 15.000"
+          title="Berapa harga untuk membeli jasa di aglees?"
+          content="Rate harga di aglees mulai dari Rp 15.000"
         />
         <FaqAccordion
-          title="Berapa lama proyek yang dikerjakan di Freelance Sigap?"
+          title="Berapa lama proyek yang dikerjakan di aglees?"
           content="Pengerjaan proyek tergantung pada jenis dan sub jenis jasa serta pemilihan fitur kecepatan pengerjaan, apabila Sigap merupakan fitur pengerjaan reguler, dan Super Sigap merupakan fitur pengerjaan cepat."
         />
         <FaqAccordion
-          title="Apakah menambah permintaan revisi menambah biaya di Freelance Sigap?"
+          title="Apakah menambah permintaan revisi menambah biaya di aglees?"
           content="Ya, biaya revisi dihitung Rp 20.000/permintaan."
         />
         <FaqAccordion

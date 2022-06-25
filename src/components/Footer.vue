@@ -1,13 +1,17 @@
+<script setup>
+  import LogoComponent from "./LogoComponent.vue";
+</script>
 <template>
   <div class="px-28 py-36">
     <div class="grid grid-cols-4 gap-8">
       <div class="flex flex-col gap-6">
-        <div class="font-lato font-bold text-4xl">
+        <!-- <div class="font-lato font-bold text-4xl">
           <span class="text-sigap-primary font-extrabold">Freelance</span> Sigap
-        </div>
+        </div> -->
+        <LogoComponent />
         <div class="font-poppins text-lg">
-          Pekerjakan Freelancer hebat, cepat. Freelance Sigap membantu
-          Anda menyewa freelancer profesional dengan cepat
+          Pekerjakan Freelancer hebat, cepat. Freelance Sigap membantu Anda
+          menyewa freelancer profesional dengan cepat
         </div>
         <div class="flex flex-row items-center gap-2">
           <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
@@ -48,14 +52,14 @@
             </li>
             <li class="flex items-center gap-2">
               <i class="fa fa-envelope fa-2x w-8" aria-hidden="true"></i>
-              freelancesigap@gmail.com
+              aglees@gmail.com
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="w-full text-center text-sigap-gray font-poppins text-lg mt-32">
-      2022 freelancesigap. All right reserved
+      2022 aglees. All right reserved
     </div>
   </div>
 </template>
