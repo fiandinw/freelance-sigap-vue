@@ -8,6 +8,10 @@
   <Navbar />
   <RouterView />
   <Footer
-    v-if="!['register', 'login', 'myprofile', 'forgot'].includes($route.name)"
+    v-if="
+      !['register', 'login', 'myprofile', 'forgot', 'admin'].includes(
+        $route.name
+      )
+    "
   />
 </template>

@@ -82,7 +82,7 @@
           Pelanggaran kategori berat: Pembunuhan karakter, Penuduhan, Melakukan
           tindakan pelecehan seksual, Mengancam, Menipu, Pornografi, Rasis.
         </li>
-        <li>Pihak konsumen tunduk terhadap aturan yang sudah dibuat.</li>
+        <li>Pihak customer tunduk terhadap aturan yang sudah dibuat.</li>
         <li>
           Kedua pihak diharap mematuhi petunjuk, syarat dan ketentuan yang sudah
           dibuat.

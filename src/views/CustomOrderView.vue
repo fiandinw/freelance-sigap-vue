@@ -1,14 +1,69 @@
-<script setup></script>
+<script setup>
+  import {
+    addDoc,
+    collection,
+    getFirestore,
+    serverTimestamp,
+  } from "@firebase/firestore";
+  import swal from "sweetalert";
+  import { ref } from "vue";
+  import router from "../router";
+
+  const inputs = ref({
+    name: "",
+    email: "",
+    phone: "",
+    description: "",
+    fileUrl: "",
+    serviceType: "",
+    subServiceType: "",
+    budgetEstimation: "",
+  });
+
+  const db = getFirestore();
+  const colRef = collection(db, "customOrder");
+
+  const handleSubmit = () => {
+    console.log(inputs.value);
+
+    addDoc(colRef, {
+      name: inputs.value.name,
+      email: inputs.value.email,
+      phone: inputs.value.phone,
+      description: inputs.value.description,
+      fileUrl: inputs.value.fileUrl,
+      serviceType: inputs.value.serviceType,
+      subServiceType: inputs.value.subServiceType,
+      budgetEstimation: inputs.value.budgetEstimation,
+      orderStatus: "requested",
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+    })
+      .then(() => {
+        swal(
+          "Order Sukses",
+          "Mohon tunggu follow up selanjutnya",
+          "success"
+        ).then(() => {
+          router.push({ name: "index" });
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+</script>
 <template>
   <main class="relative flex flex-col items-center px-12">
     <div class="text-center mt-12 font-lato font-bold text-5xl">
       Custom <span class="text-sigap-primary">Order</span>
     </div>
     <section class="container flex flex-col items-start py-16">
-      <form class="w-full flex flex-col gap-4">
+      <form @submit.prevent="handleSubmit" class="w-full flex flex-col gap-4">
         <div class="form-group">
           <label class="font-semibold text-lg" for="nama">Nama</label>
           <input
+            v-model="inputs.name"
             class="w-full border-2 border-sigap-primary rounded-lg px-4 py-1"
             type="text"
             id="nama"
@@ -18,6 +73,7 @@
         <div class="form-group">
           <label class="font-semibold text-lg" for="email">Email</label>
           <input
+            v-model="inputs.email"
             class="w-full border-2 border-sigap-primary rounded-lg px-4 py-1"
             type="text"
             id="email"
@@ -29,8 +85,9 @@
             >Nomor Telepon</label
           >
           <input
+            v-model="inputs.phone"
             class="w-full border-2 border-sigap-primary rounded-lg px-4 py-1"
-            type="text"
+            type="number"
             id="telepon"
             placeholder="Masukan Nomor Telepon Anda (+62)"
           />
@@ -38,6 +95,7 @@
         <div class="form-group">
           <label class="font-semibold text-lg" for="deskripsi">Deskripsi</label>
           <textarea
+            v-model="inputs.description"
             class="w-full border-2 border-sigap-primary rounded-lg px-4 py-1"
             name="deskripsi"
             id="deskripsi"
@@ -79,6 +137,7 @@
             >Estimasi Budget</label
           >
           <input
+            v-model="inputs.budgetEstimation"
             class="w-full border-2 border-sigap-primary rounded-lg px-4 py-1"
             type="number"
             id="budget"

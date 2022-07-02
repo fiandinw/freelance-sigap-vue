@@ -31,14 +31,25 @@
     </div>
     <section v-if="$route.hash == ''" class="container py-16">
       <div class="font-semibold text-2xl mb-8">Ongoing</div>
-      <MyOrderStep />
+      <div class="flex flex-row flex-wrap">
+        <MyOrderStep />
+        <MyOrderStep />
+        <MyOrderStep />
+        <MyOrderStep />
+        <MyOrderStep />
+        <MyOrderStep />
+        <MyOrderStep />
+      </div>
     </section>
     <section v-if="$route.hash == ''" class="container py-16">
       <div class="font-semibold text-2xl mb-8">History</div>
       <MyOrderStep />
     </section>
 
-    <section v-if="$route.hash == '#request'" class="container py-16 flex flex-row items-center justify-evenly">
+    <section
+      v-if="$route.hash == '#request'"
+      class="container py-16 flex flex-row items-center justify-evenly"
+    >
       <div>
         <div class="font-lato font-bold text-4xl mb-4">Latest</div>
         <MyCustomOrder ispending="yes" />

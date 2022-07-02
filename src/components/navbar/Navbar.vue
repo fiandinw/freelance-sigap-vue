@@ -11,7 +11,14 @@
     "customorder",
     "instantorder",
   ];
-  const fullNav = [...simpleNav, "login", "register", "forgot", "myprofile"];
+  const fullNav = [
+    ...simpleNav,
+    "login",
+    "register",
+    "forgot",
+    "myprofile",
+    "admin",
+  ];
 </script>
 
 <template>

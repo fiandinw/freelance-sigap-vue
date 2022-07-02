@@ -19,6 +19,7 @@ import TosView from '../views/TosView.vue'
 import CustomOrderView from '../views/CustomOrderView.vue'
 import InstantOrderView from '../views/InstantOrderView.vue'
 import ForgotView from '../views/ForgotView.vue'
+import AdminView from '../views/AdminView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -122,6 +123,11 @@ const router = createRouter({
       path: '/lupaakun',
       name: 'forgot',
       component: ForgotView
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView
     },
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -5,7 +5,9 @@
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
-    <div class="text-center mt-12 font-lato font-bold text-4xl">About</div>
+    <div class="text-center mt-12 font-lato font-bold text-4xl">
+      About <span class="text-sigap-primary">Us</span>
+    </div>
 
     <section
       class="container flex flex-row py-16 text-lg font-semibold text-center px-24"
