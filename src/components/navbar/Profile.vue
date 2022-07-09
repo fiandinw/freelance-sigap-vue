@@ -1,6 +1,17 @@
 <script setup>
-  import { RouterLink } from "vue-router";
+  import { RouterLink, useRouter } from "vue-router";
   import LogoComponent from "../LogoComponent.vue";
+  import { getAuth, signOut } from "firebase/auth";
+
+  const router = useRouter();
+
+  const auth = getAuth();
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+      console.log("keluar berhasil");
+      router.push({ name: "index" });
+    });
+  };
 </script>
 <template>
   <nav
@@ -43,12 +54,11 @@
         FAQ
       </button>
     </RouterLink>
-    <RouterLink :to="{ name: 'index' }">
-      <div
-        class="cursor-pointer absolute bottom-0 right-0 m-8 font-semibold text-2xl"
-      >
-        Keluar&nbsp;<i class="fa fa-power-off fa-lg" aria-hidden="true"></i>
-      </div>
-    </RouterLink>
+    <div
+      @click="handleLogout"
+      class="cursor-pointer absolute bottom-0 right-0 m-8 font-semibold text-2xl"
+    >
+      Keluar&nbsp;<i class="fa fa-power-off fa-lg" aria-hidden="true"></i>
+    </div>
   </nav>
 </template>

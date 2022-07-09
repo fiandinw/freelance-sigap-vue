@@ -5,6 +5,23 @@
   import ProjectCard from "../components/ProjectCard.vue";
   import PortfolioCard from "../components/PortfolioCard.vue";
   import { Splide, SplideSlide } from "@splidejs/vue-splide";
+  import { getAuth, onAuthStateChanged } from "@firebase/auth";
+
+  // const auth = getAuth();
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     // User is signed in, see docs for a list of available properties
+  //     // https://firebase.google.com/docs/reference/js/firebase.User
+  //     const uid = user.uid;
+
+  //     console.log("dari home ", user, uid);
+  //     // ...
+  //   } else {
+  //     // User is signed out
+  //     // ...
+  //     console.log("dari app ELSE STATE");
+  //   }
+  // });
 </script>
 
 <template>
