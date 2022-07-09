@@ -22,11 +22,13 @@
       inputs.value.password
     )
       .then(() => {
-        console.log("register sukses");
-        router.push({ name: "home" });
+        swal("Register sukses", "Selamat Datang", "success").then(() => {
+          router.push({ name: "home" });
+        });
       })
       .catch((err) => {
         console.log(err.code, err.message);
+        swal(err.code, err.message, "error");
       });
   };
 </script>
