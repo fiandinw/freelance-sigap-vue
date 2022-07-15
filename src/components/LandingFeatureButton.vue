@@ -14,7 +14,7 @@
   <div
     @pointerenter="onHover"
     @pointerleave="onHover"
-    class="card w-96 h-96 flex flex-col items-center justify-between p-8 shadow-xl hover:bg-sigap-primary hover:text-white transition-all duration-300 cursor-pointer"
+    class="card w-96 h-96 flex flex-col items-center justify-between p-8 shadow-xl hover:bg-sigap-secondary hover:text-white transition-all duration-300 cursor-auto"
   >
     <img
       :class="

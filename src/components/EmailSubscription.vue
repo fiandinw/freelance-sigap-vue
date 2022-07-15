@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full flex flex-col items-center justify-center py-20 bg-gradient-to-br from-sigap-primary to-[#FFFFFF00] gap-12"
+    class="w-full flex flex-col items-center justify-center py-20 bg-gradient-to-br from-sigap-secondary to-[#FFFFFF00] gap-12"
   >
     <div>
       <div class="font-poppins font-medium text-5xl text-center">

@@ -34,7 +34,7 @@
     alt="Landing Background"
   /> -->
   <div
-    class="w-screen h-screen absolute top-0 left-0 bg-gradient-to-tl from-sigap-primary to-gray-50"
+    class="w-screen h-screen absolute top-0 left-0 bg-gradient-to-tl from-sigap-secondary to-gray-50"
   >
     <div
       class="w-full h-full bg-gradient-to-t from-white via-transparent to-transparent"

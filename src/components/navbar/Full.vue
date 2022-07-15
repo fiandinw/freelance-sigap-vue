@@ -69,42 +69,42 @@
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Graphic & Design</RouterLink
+      ><button>Graphic & Design</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Videography</RouterLink
+      ><button>Videography</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Animation</RouterLink
+      ><button>Animation</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Programming</RouterLink
+      ><button>Programming</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Digital Marketing</RouterLink
+      ><button>Digital Marketing</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Writing & Translation</RouterLink
+      ><button>Writing & Translation</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Music & Audio</RouterLink
+      ><button>Music & Audio</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      >Photography</RouterLink
+      ><button>Photography</button></RouterLink
     >
   </div>
 </template>
