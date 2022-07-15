@@ -5,7 +5,8 @@
   import { RouterLink } from "vue-router";
   import iconmoneybag from "../assets/icons/moneybag.png";
   import iconpricetag from "../assets/icons/pricetag.png";
-  import iconpoin from "../assets/icons/poin.png";
+  import iconpoin from "../assets/icons/poinnew.png";
+  import iconpoin1 from "../assets/icons/poin.png";
   import { Icon } from "@iconify/vue";
   import discountMedal from "../assets/icons/discountMedal.png";
 </script>
@@ -28,8 +29,8 @@
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#point' }">
         <MyClaimTypeButton title="Poin">
-          <!-- <img :src="iconpoin" alt="" /> -->
-          <Icon class="text-7xl" icon="carbon:condition-wait-point" />
+          <img :src="iconpoin1" alt="" width="70" />
+          <!-- <Icon class="text-7xl" icon="carbon:condition-wait-point" /> -->
         </MyClaimTypeButton>
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#garansi' }">
@@ -96,8 +97,14 @@
             Poin Saya
           </div>
         </div>
-        <div class="text-center mt-20">
-          Dapatkan poin dengan klaim dibawah ini
+        <div
+          class="text-center mt-20 px-4 w-full flex items-center justify-center"
+        >
+          <div
+            class="bg-sigap-secondary rounded-full w-fit text-white px-12 py-2"
+          >
+            Dapatkan poin dengan klaim dibawah ini
+          </div>
         </div>
         <div class="flex flex-row items-center justify-evenly">
           <div class="flex flex-col shadow-lg">
