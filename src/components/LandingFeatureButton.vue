@@ -28,7 +28,13 @@
       height="34"
     />
     <div class="relative w-full grow flex items-center justify-center">
-      <div class="bg-sigap-light rounded-[100%] w-40 h-40 absolute z-0"></div>
+      <div
+        :class="`${
+          isHover
+            ? 'bg-white bg-opacity-100'
+            : 'bg-sigap-secondary bg-opacity-10'
+        } rounded-[100%] w-40 h-40 absolute z-0 transition-all duration-300`"
+      ></div>
       <img
         :class="
           isHover
