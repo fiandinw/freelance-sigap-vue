@@ -98,7 +98,7 @@
           </div>
         </div>
         <div
-          class="text-center mt-20 px-4 w-full flex items-center justify-center"
+          class="text-center my-20 px-4 w-full flex items-center justify-center"
         >
           <div
             class="bg-sigap-secondary rounded-full w-fit text-white px-12 py-2"
