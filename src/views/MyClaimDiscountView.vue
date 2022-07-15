@@ -7,6 +7,7 @@
   import iconpricetag from "../assets/icons/pricetag.png";
   import iconpoin from "../assets/icons/poin.png";
   import { Icon } from "@iconify/vue";
+  import discountMedal from "../assets/icons/discountMedal.png";
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
@@ -29,6 +30,11 @@
         <MyClaimTypeButton title="Poin">
           <!-- <img :src="iconpoin" alt="" /> -->
           <Icon class="text-7xl" icon="carbon:condition-wait-point" />
+        </MyClaimTypeButton>
+      </RouterLink>
+      <RouterLink :to="{ name: 'myclaimdiscount', hash: '#garansi' }">
+        <MyClaimTypeButton title="Klaim Garansi">
+          <Icon class="text-7xl" icon="ph:medal-light" />
         </MyClaimTypeButton>
       </RouterLink>
     </section>
@@ -148,6 +154,35 @@
               </button>
             </div>
           </div>
+        </div>
+      </section>
+    </article>
+    <article v-if="$route.hash == '#garansi'" class="container">
+      <section class="flex flex-row items-end justify-between py-16">
+        <div>
+          <div class="font-lato text-4xl text-sigap-gray">My Claim</div>
+          <div class="font-lato font-bold text-6xl">
+            Klaim <span class="text-sigap-primary">Garansi</span>
+          </div>
+        </div>
+      </section>
+      <div
+        class="divider border-t-[1px] border-sigap-gray my-6 container"
+      ></div>
+      <section class="mt-12 flex flex-col gap-4">
+        <div class="font-lato text-4xl text-sigap-gray">
+          Masukan Kode Garansi
+        </div>
+        <div class="grid grid-cols-2">
+          <input
+            type="text"
+            class="border-2 border-sigap-secondary rounded-l-lg text-6xl box-border px-2"
+          />
+          <button
+            class="text-2xl w-fit bg-sigap-secondary font-bold font-lato text-white px-12 rounded-r-lg shrink"
+          >
+            Klaim
+          </button>
         </div>
       </section>
     </article>
