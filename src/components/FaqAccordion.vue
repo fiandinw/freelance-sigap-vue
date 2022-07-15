@@ -11,8 +11,9 @@
   };
 </script>
 <template>
-  <div @click="onClick">
+  <div>
     <div
+      @click="onClick"
       :class="
         isOpen
           ? 'border-2 border-b-2 border-sigap-gray rounded-lg rounded-b-none shadow-none text-2xl font-semibold flex flex-row px-8 py-2 items-center transition-all duration-300 cursor-pointer'

@@ -195,7 +195,7 @@
               freelancer, dan kecepatan pengerjaan.
             </li>
             <li class="mt-4">
-              Pada Custom Order, calon customer tidak perlu login atau signup
+              Pada Custom Order, calon customer tidak perlu login atau sign up
               terlebih dahulu, dan calon customer bebas menentukan budget untuk
               membayar jasa freelancer.
             </li>
@@ -215,11 +215,11 @@
         />
         <FaqAccordion
           title="Bagaimana ketentuan transaksi di aglees?"
-          content="Calon customer harus memperhatikan syarat dan ketentuan order yang tertera pada Terms and Condition sebelum melakukan order. Semua bentuk persetujuan dari calon customer dianggap sebagai hal yang absah. Terkait kebijakan pembatalan order dari calon customer merupakan tanggung jawab dari calon customer, jika sebaliknya di tengah proyek berjalan dari pihak freelancer terdapat keterlambatan, maka calon customer dapat mengklaim garansi berupa uang kembali 100% atau proyek dialihkan kepada freelancer lain."
+          content="Calon customer harus memperhatikan syarat dan ketentuan order yang tertera pada Syarat dan Ketentuan sebelum melakukan order. Semua bentuk persetujuan dari calon customer dianggap sebagai hal yang absah. Terkait kebijakan pembatalan order dari calon customer merupakan tanggung jawab dari calon customer, jika sebaliknya di tengah proyek berjalan dari pihak freelancer terdapat keterlambatan, maka calon customer dapat mengklaim garansi berupa uang kembali 100% atau proyek dialihkan kepada freelancer lain."
         />
         <FaqAccordion
           title="Bagaimana cara klaim garansi?"
-          content="Calon customer harus melakukan login atau signup terlebih dahulu. Di sebelah profile calon customer terdapat My Claim dan di sana akan diarahkan kepada support center untuk teknis klaim. Jika calon customer tidak membuat akun, maka klaim garansi tidak berlaku kecuali memiliki rekam jejak transaksi."
+          content="Calon customer harus melakukan login atau sign up terlebih dahulu. Di sebelah profile calon customer terdapat My Claim dan di sana akan diarahkan kepada support center untuk teknis klaim. Jika calon customer tidak membuat akun, maka klaim garansi tidak berlaku kecuali memiliki rekam jejak transaksi."
         />
         <FaqAccordion
           title="Apakah di aglees terdapat voucher diskon?"
