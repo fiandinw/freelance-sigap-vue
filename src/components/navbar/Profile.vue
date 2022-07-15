@@ -56,7 +56,7 @@
       </button>
     </RouterLink>
     <div
-      @click="$router.go(-1)"
+      @click="$router.push({ name: 'home' })"
       class="cursor-pointer absolute bottom-0 left-0 m-8 font-semibold text-2xl flex flex-row gap-1 items-center"
     >
       <Icon icon="akar-icons:arrow-back-thick" class="text-4xl" />Kembali
