@@ -6,6 +6,7 @@
   import iconmoneybag from "../assets/icons/moneybag.png";
   import iconpricetag from "../assets/icons/pricetag.png";
   import iconpoin from "../assets/icons/poin.png";
+  import { Icon } from "@iconify/vue";
 </script>
 <template>
   <main class="relative flex flex-col items-center px-12">
@@ -14,17 +15,20 @@
     >
       <RouterLink :to="{ name: 'myclaimdiscount' }">
         <MyClaimTypeButton title="Diskon">
-          <img class="bg-white rounded-[100%]" :src="iconpricetag" alt="" />
+          <!-- <img class="bg-white rounded-[100%]" :src="iconpricetag" alt="" /> -->
+          <Icon class="text-6xl" icon="ic:outline-discount" />
         </MyClaimTypeButton>
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#cashback' }">
         <MyClaimTypeButton title="Cashback">
-          <img class="bg-white rounded-[100%]" :src="iconmoneybag" alt="" />
+          <Icon class="text-7xl" icon="healthicons:money-bag-outline" />
+          <!-- <img class="bg-white rounded-[100%]" :src="iconmoneybag" alt="" /> -->
         </MyClaimTypeButton>
       </RouterLink>
       <RouterLink :to="{ name: 'myclaimdiscount', hash: '#point' }">
         <MyClaimTypeButton title="Poin">
-          <img :src="iconpoin" alt="" />
+          <!-- <img :src="iconpoin" alt="" /> -->
+          <Icon class="text-7xl" icon="carbon:condition-wait-point" />
         </MyClaimTypeButton>
       </RouterLink>
     </section>
