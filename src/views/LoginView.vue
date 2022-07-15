@@ -36,7 +36,10 @@
 
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
-    <div class="card w-[465px] shadow-lg p-6 flex flex-col items-center gap-4">
+    <form
+      @submit.prevent="handleLogin"
+      class="card w-[465px] shadow-lg p-6 flex flex-col items-center gap-4"
+    >
       <RouterLink :to="{ name: 'index' }">
         <LogoComponent />
       </RouterLink>
@@ -62,7 +65,6 @@
         >
       </div>
       <button
-        @click="handleLogin"
         class="px-6 py-3 bg-sigap-primary rounded-full w-full text-white font-semibold text-2xl"
       >
         Lanjut
@@ -73,6 +75,6 @@
           >Daftar</RouterLink
         >
       </div>
-    </div>
+    </form>
   </div>
 </template>
