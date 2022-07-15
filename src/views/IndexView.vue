@@ -223,7 +223,7 @@
         />
         <FaqAccordion
           title="Apakah di aglees terdapat voucher diskon?"
-          content="Ya. Voucher diskon didapatkan dari mengisi review feedback setelah order dan event-event aglees."
+          content="Ya. Voucher diskon didapatkan dari mengumpulkan poin setelah order dengan mengisi review feedback dan event-event aglees."
         />
         <FaqAccordion
           title="Bagaimana cara klaim voucher diskon?"
@@ -235,7 +235,7 @@
         />
         <FaqAccordion
           title="Berapa harga untuk membeli jasa di aglees?"
-          content="Rate harga di aglees mulai dari Rp 15.000"
+          content="Rate harga di aglees mulai dari Rp 15K"
         />
         <FaqAccordion
           title="Berapa lama proyek yang dikerjakan di aglees?"
@@ -243,7 +243,7 @@
         />
         <FaqAccordion
           title="Apakah menambah permintaan revisi menambah biaya di aglees?"
-          content="Ya, biaya revisi dihitung Rp 20.000/permintaan."
+          content="Ya, biaya revisi dihitung Rp 20K/permintaan."
         />
         <FaqAccordion
           title="Apa yang didapat setelah proyek selesai?"

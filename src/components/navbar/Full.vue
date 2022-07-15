@@ -66,13 +66,15 @@
   <div
     class="border-y-[1px] bg-white border-sigap-gray py-2 text-lg flex flex-row items-center justify-evenly"
   >
-    <RouterLink :to="{ name: 'categorylist' }">Graphic&Design</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }">Graphic & Design</RouterLink>
     <RouterLink :to="{ name: 'categorylist' }">Videography</RouterLink>
     <RouterLink :to="{ name: 'categorylist' }">Animation</RouterLink>
     <RouterLink :to="{ name: 'categorylist' }">Programming</RouterLink>
     <RouterLink :to="{ name: 'categorylist' }">Digital Marketing</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Writing&Translation</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Music&Audio</RouterLink>
+    <RouterLink :to="{ name: 'categorylist' }"
+      >Writing & Translation</RouterLink
+    >
+    <RouterLink :to="{ name: 'categorylist' }">Music & Audio</RouterLink>
     <RouterLink :to="{ name: 'categorylist' }">Photography</RouterLink>
   </div>
 </template>
