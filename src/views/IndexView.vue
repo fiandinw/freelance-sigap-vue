@@ -177,7 +177,7 @@
         <FaqAccordion title="Bagaimana cara order di aglees?">
           <ol class="list-decimal">
             <li>
-              Pada Instan Order, calon customer harus melakukan login atau sign
+              Pada Instant Order, calon customer harus melakukan login atau sign
               up terlebih dahulu, kemudian nanti mengisi e-formulir yang sudah
               tersedia, harga jasa menyesuaikan jenis jasa, kualitas atau kelas
               freelancer, dan kecepatan pengerjaan.

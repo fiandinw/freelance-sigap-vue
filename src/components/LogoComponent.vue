@@ -1,11 +1,12 @@
 <script setup>
   import logo from "../assets/agleeslogo.png";
+  import logo1 from "../assets/agleesLogo1.png";
 </script>
 <template>
   <div class="logo flex flex-row shrink-0 gap-2 cursor-pointer">
-    <img :src="logo" alt="logo" width="100" />
-    <!-- <div class="text-xl font-bold font-lato">
-      <span class="font-extrabold text-sigap-primary text-3xl">Aglees.</span>
-    </div> -->
+    <img :src="logo1" alt="logo" width="38" />
+    <div class="text-xl font-normal font-lexend">
+      <span class="text-sigap-primary text-3xl">aglees.</span>
+    </div>
   </div>
 </template>
