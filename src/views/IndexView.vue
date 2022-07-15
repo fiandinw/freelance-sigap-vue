@@ -86,7 +86,7 @@
     </section>
 
     <section class="container pt-16 flex flex-row gap-16">
-      <img :src="landingGirl" alt="Good" width="431" height="589" />
+      <img :src="landingGirl" alt="Good" width="500" />
       <div class="grow flex flex-col gap-8">
         <div
           class="font-lato text-5xl font-bold text-left self-start uppercase"
