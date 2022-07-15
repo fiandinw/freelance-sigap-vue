@@ -85,7 +85,7 @@
       />
     </section>
 
-    <section class="container py-16 flex flex-row gap-16">
+    <section class="container pt-16 flex flex-row gap-16">
       <img :src="landingGirl" alt="Good" width="431" height="589" />
       <div class="grow flex flex-col gap-8">
         <div
