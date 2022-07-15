@@ -66,15 +66,45 @@
   <div
     class="border-y-[1px] bg-white border-sigap-gray py-2 text-lg flex flex-row items-center justify-evenly"
   >
-    <RouterLink :to="{ name: 'categorylist' }">Graphic & Design</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Videography</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Animation</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Programming</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Digital Marketing</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }"
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Graphic & Design</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Videography</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Animation</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Programming</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Digital Marketing</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
       >Writing & Translation</RouterLink
     >
-    <RouterLink :to="{ name: 'categorylist' }">Music & Audio</RouterLink>
-    <RouterLink :to="{ name: 'categorylist' }">Photography</RouterLink>
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Music & Audio</RouterLink
+    >
+    <RouterLink
+      class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
+      :to="{ name: 'categorylist' }"
+      >Photography</RouterLink
+    >
   </div>
 </template>
