@@ -50,12 +50,14 @@
         type="text"
         placeholder="Email atau Nomor Ponsel"
         v-model="inputs.email"
+        required
       />
       <input
         :class="styles.authInput"
         type="password"
         placeholder="Password"
         v-model="inputs.password"
+        required
       />
       <div class="self-end">
         <RouterLink
