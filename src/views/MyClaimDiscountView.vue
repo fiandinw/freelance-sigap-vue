@@ -43,7 +43,7 @@
         <div>
           <div class="font-lato text-4xl text-sigap-gray">My Claim</div>
           <div class="font-lato font-bold text-6xl">
-            Voucher <span class="text-sigap-primary">Diskon</span>
+            Voucher <span class="text-sigap-secondary">Diskon</span>
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@
         <div>
           <div class="font-lato text-4xl text-sigap-gray">My Claim</div>
           <div class="font-lato font-bold text-6xl">
-            Voucher <span class="text-sigap-primary">Cashback</span>
+            Voucher <span class="text-sigap-secondary">Cashback</span>
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@
         <div>
           <div class="font-lato text-4xl text-sigap-gray">My Claim</div>
           <div class="font-lato font-bold text-6xl">
-            Reward <span class="text-sigap-primary">Point</span>
+            Reward <span class="text-sigap-secondary">Point</span>
           </div>
         </div>
       </section>
@@ -91,7 +91,7 @@
             <img class="inline-block" :src="iconpoin" alt="" />&nbsp;0K
           </div>
           <div
-            class="py-16 bg-sigap-primary text-white font-lato font-bold text-6xl w-3/12 flex items-center justify-center"
+            class="py-16 bg-sigap-secondary text-white font-lato font-bold text-6xl w-3/12 flex items-center justify-center"
           >
             Poin Saya
           </div>
@@ -108,11 +108,11 @@
             </div>
             <div class="grow flex flex-col items-center gap-12 px-8 py-4">
               <i
-                class="fa fa-star fa-4x text-sigap-primary mt-12"
+                class="fa fa-star fa-4x text-sigap-secondary mt-12"
                 aria-hidden="true"
               ></i>
               <button
-                class="text-white bg-sigap-primary px-20 py-2 rounded-full"
+                class="text-white bg-sigap-secondary px-20 py-2 rounded-full"
               >
                 Klaim
               </button>
@@ -126,11 +126,11 @@
             </div>
             <div class="grow flex flex-col items-center gap-12 px-8 py-4">
               <i
-                class="fa fa-calendar-check-o fa-4x text-sigap-primary mt-12"
+                class="fa fa-calendar-check-o fa-4x text-sigap-secondary mt-12"
                 aria-hidden="true"
               ></i>
               <button
-                class="text-white bg-sigap-primary px-20 py-2 rounded-full"
+                class="text-white bg-sigap-secondary px-20 py-2 rounded-full"
               >
                 Klaim
               </button>
@@ -144,15 +144,26 @@
             </div>
             <div class="grow flex flex-col items-center gap-12 px-8 py-4">
               <i
-                class="fa fa-money fa-4x text-sigap-primary mt-12"
+                class="fa fa-money fa-4x text-sigap-secondary mt-12"
                 aria-hidden="true"
               ></i>
               <button
-                class="text-white bg-sigap-primary px-20 py-2 rounded-full"
+                class="text-white bg-sigap-secondary px-20 py-2 rounded-full"
               >
                 Klaim
               </button>
             </div>
+          </div>
+        </div>
+        <div class="font-lato text-5xl mt-12">Masukan Kode Lisensi Reward</div>
+        <div class="w-full shadow-lg flex flex-row">
+          <div class="py-12 w-9/12 font-lato font-bold text-6xl px-20">
+            <input class="w-full" type="text" />
+          </div>
+          <div
+            class="cursor-pointer py-12 bg-sigap-secondary text-white font-lato font-bold text-6xl w-3/12 flex items-center justify-center"
+          >
+            Klaim
           </div>
         </div>
       </section>
@@ -162,7 +173,7 @@
         <div>
           <div class="font-lato text-4xl text-sigap-gray">My Claim</div>
           <div class="font-lato font-bold text-6xl">
-            Klaim <span class="text-sigap-primary">Garansi</span>
+            Klaim <span class="text-sigap-secondary">Garansi</span>
           </div>
         </div>
       </section>
@@ -173,16 +184,15 @@
         <div class="font-lato text-4xl text-sigap-gray">
           Masukan Kode Garansi
         </div>
-        <div class="grid grid-cols-2">
-          <input
-            type="text"
-            class="border-2 border-sigap-secondary rounded-l-lg text-6xl box-border px-2"
-          />
-          <button
-            class="text-2xl w-fit bg-sigap-secondary font-bold font-lato text-white px-12 rounded-r-lg shrink"
+        <div class="w-full shadow-lg flex flex-row">
+          <div class="py-12 w-9/12 font-lato font-bold text-6xl px-20">
+            <input class="w-full text-center" type="text" />
+          </div>
+          <div
+            class="cursor-pointer py-12 bg-sigap-secondary text-white font-lato font-bold text-6xl w-3/12 flex items-center justify-center"
           >
             Klaim
-          </button>
+          </div>
         </div>
       </section>
     </article>
