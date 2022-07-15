@@ -100,31 +100,43 @@
               class="z-40"
               :icon="discountMedal"
               title="Money Guarantee"
-            />
+              >Garansi uang kembali 100% untuk proyek-proyek cacat atau secara
+              alami kesalahan aglees.</LandingFeatureCard
+            >
           </div>
           <div>
             <LandingFeatureCard
               class="z-40"
               :icon="wallet"
               title="Safe Transaction"
-            />
+              >Transaksi aman dari pra produksi sampai pasca produksi dipantau
+              oleh aglees dan dijamin keamanannya oleh
+              aglees.</LandingFeatureCard
+            >
           </div>
           <div>
-            <LandingFeatureCard
-              class="z-40"
-              :icon="iconTime"
-              title="Efficient"
-            />
+            <LandingFeatureCard class="z-40" :icon="iconTime" title="Efficient"
+              >Progress dan hasil pekerjaan oleh freelancer yang cenderung lebih
+              cepat dan tepat untuk customer.</LandingFeatureCard
+            >
           </div>
           <div>
-            <LandingFeatureCard class="z-30" :icon="wave" title="Flexible" />
+            <LandingFeatureCard class="z-30" :icon="wave" title="Flexible"
+              >Customer dapat memesan proyek sambil bersantai atau mempermudah
+              mobilitas serta hasil pekerjaan dapat direvisi secara mudah, cepat
+              dan tepat.</LandingFeatureCard
+            >
           </div>
           <div>
             <LandingFeatureCard
               class="z-30"
               :icon="iconCheck"
               title="Good Service"
-            />
+              >aglees mengedepankan kecepatan, ketepatan serta keterjangkauan
+              hasil pekerjaan mulai dari tahap dealing transaction, pra produksi
+              sampai hasil proyek sampai secara utuh di tangan
+              customer.</LandingFeatureCard
+            >
           </div>
         </div>
       </div>

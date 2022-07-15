@@ -10,8 +10,8 @@
         </div> -->
         <LogoComponent />
         <div class="font-poppins text-lg">
-          Pekerjakan Freelancer hebat, cepat. Freelance Sigap membantu Anda
-          menyewa freelancer profesional dengan cepat
+          Pekerjakan Freelancer hebat, cepat. Aglees membantu Anda menyewa
+          freelancer profesional dengan cepat
         </div>
         <div class="flex flex-row items-center gap-2">
           <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
