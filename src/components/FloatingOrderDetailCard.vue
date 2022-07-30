@@ -3,6 +3,8 @@
   defineProps({
     paymentMethod: { default: "" },
     isBayar: { default: false },
+    goto: { default: "" },
+    buttonText: { default: "Bayar" },
   });
 </script>
 <template>
@@ -40,14 +42,16 @@
         <div class="font-semibold text-2xl text-sigap-primary">0 Hari</div>
       </div>
       <div class="divider border-t-[1px] border-sigap-gray my-6"></div>
-      <RouterLink v-if="isBayar" :to="{ name: 'payment' }">
-        <button
-          class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
-        >
-          Bayar
-        </button>
-      </RouterLink>
-      <RouterLink v-if="$route.name == 'payment'" :to="{ name: 'myorder' }">
+      <slot>
+        <RouterLink v-if="isBayar" :to="{ name: 'payment' }">
+          <button
+            class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
+          >
+            {{ $props.buttonText }}
+          </button>
+        </RouterLink>
+      </slot>
+      <RouterLink v-if="$route.name == 'payment'" :to="goto">
         <button
           class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
         >

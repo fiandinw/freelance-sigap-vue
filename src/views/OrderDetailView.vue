@@ -126,7 +126,7 @@
         </section>
       </div>
       <div class="w-5/12 relative flex justify-center">
-        <FloatingOrderDetailCard :isBayar="true" />
+        <FloatingOrderDetailCard :isBayar="true" :goto="{ name: 'payment' }" />
       </div>
     </article>
   </main>
