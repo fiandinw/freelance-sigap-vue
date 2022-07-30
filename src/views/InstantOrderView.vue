@@ -1,11 +1,20 @@
-<script setup></script>
+<script setup>
+  import swal from "sweetalert";
+  import router from "../router";
+
+  const handleSubmit = () => {
+    swal("Order Sukses", "Sukses", "success").then(() => {
+      router.push({ name: "orderdetail" });
+    });
+  };
+</script>
 <template>
   <main class="relative flex flex-col items-center px-12">
     <div class="text-center mt-12 font-lato font-bold text-5xl">
       Instant <span class="text-sigap-primary">Order</span>
     </div>
     <section class="container flex flex-col items-start py-16">
-      <form class="w-full flex flex-col gap-4">
+      <form @submit.prevent="handleSubmit" class="w-full flex flex-col gap-4">
         <div class="form-group">
           <label class="font-semibold text-lg" for="nama">Nama</label>
           <input
