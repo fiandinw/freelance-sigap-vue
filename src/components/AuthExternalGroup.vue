@@ -10,8 +10,10 @@
   } from "firebase/auth";
   import { useRouter } from "vue-router";
   import swal from "sweetalert";
+  import { collection, doc, getFirestore, setDoc } from "@firebase/firestore";
 
   const router = useRouter();
+  const db = getFirestore();
   const auth = getAuth();
 
   const provider = new GoogleAuthProvider();
@@ -21,23 +23,28 @@
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        // ...
-        swal("Login Berhasil", "Selamat Datang", "success").then(() => {
-          router.push({ name: "home" });
-        });
+        if (user) {
+          setDoc(doc(collection(db, "customer"), user.uid), {
+            email: user.email,
+          }).then(() => {
+            swal("Login Berhasil", "Selamat Datang", "success").then(() => {
+              router.push({ name: "home" });
+            });
+          });
+        }
       })
       .catch((error) => {
         // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
         // The email of the user's account used.
-        const email = error.customData.email;
+        // const email = error.customData.email;
         // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        // const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
         console.log(error.code, error.message);
         swal(error.code, error.message, "error");
@@ -48,14 +55,20 @@
     signInWithPopup(auth, provider2)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = FacebookAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        // const credential = FacebookAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        if (user) {
+          setDoc(doc(collection(db, "customer"), user.uid), {
+            email: user.email,
+          }).then(() => {
+            swal("Login Berhasil", "Selamat Datang", "success").then(() => {
+              router.push({ name: "home" });
+            });
+          });
+        }
         // ...
-        swal("Login Berhasil", "Selamat Datang", "success").then(() => {
-          router.push({ name: "home" });
-        });
       })
       .catch((error) => {
         // Handle Errors here.

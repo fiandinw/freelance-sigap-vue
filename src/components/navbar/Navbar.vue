@@ -30,9 +30,7 @@
     if (user) {
       const uid = user.uid;
       isLogin.value = true;
-      console.log("dari nav: ", user, uid);
     } else {
-      console.log("dari nav: User Logout");
     }
   });
 </script>

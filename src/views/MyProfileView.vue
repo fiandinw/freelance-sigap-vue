@@ -42,15 +42,11 @@
       const uid = user.uid;
       customerId = uid;
       getCustomerData();
-      console.log("dari myprofile: ", user, uid);
     } else {
-      console.log("dari myprofile: User Logout");
     }
   });
 
-  onMounted(() => {
-    console.log("ci=ust", customerId);
-  });
+  onMounted(() => {});
 
   const handleSubmit = () => {
     const docref = doc(db, "customer", customerId);
