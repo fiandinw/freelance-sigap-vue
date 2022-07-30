@@ -1,5 +1,8 @@
 <script setup>
   import { RouterLink } from "vue-router";
+  defineProps({
+    paymentMethod: { default: "" },
+  });
 </script>
 <template>
   <div class="floatingCard w-[450px] h-fit bg-white sticky shadow-lg">

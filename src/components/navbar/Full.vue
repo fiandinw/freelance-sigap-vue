@@ -84,7 +84,7 @@
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
       :to="{ name: 'categorylist' }"
-      ><button>Programming</button></RouterLink
+      ><button>Pendidikan</button></RouterLink
     >
     <RouterLink
       class="hover:bg-sigap-primary hover:text-white px-4 rounded-full"
