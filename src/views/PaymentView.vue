@@ -36,12 +36,6 @@
               <div>
                 <input type="radio" name="metode" id="cc" />&nbsp;<label
                   for="cc"
-                  >Credit Card</label
-                >
-              </div>
-              <div>
-                <input type="radio" name="metode" id="cc" />&nbsp;<label
-                  for="cc"
                   >E-Wallet</label
                 >
               </div>

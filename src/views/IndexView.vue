@@ -19,8 +19,24 @@
   import { RouterLink } from "vue-router";
   import videoLanding from "../assets/video.mp4";
   import { onMounted, ref } from "vue";
+  import Simple from "../components/navbar/Simple.vue";
+  import Full from "../components/navbar/Full.vue";
+  import { getAuth, onAuthStateChanged } from "@firebase/auth";
 
   const videoRef = ref(null);
+  const isLogin = ref(false);
+
+  const auth = getAuth();
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      isLogin.value = true;
+      console.log("dari nav: ", user, uid);
+    } else {
+      console.log("dari nav: User Logout");
+    }
+  });
 
   onMounted(() => {
     videoRef.value.play();
@@ -33,6 +49,16 @@
     :src="landingBG"
     alt="Landing Background"
   /> -->
+  <nav v-if="!isLogin" class="fixed top-0 w-full z-50 flex justify-center p-12">
+    <Simple />
+  </nav>
+  <div v-if="!isLogin" class="h-24"></div>
+
+  <nav v-if="isLogin" class="fixed top-0 w-full z-50">
+    <Full />
+  </nav>
+  <div v-if="isLogin" class="h-40"></div>
+
   <div
     class="w-screen h-screen absolute top-0 left-0 bg-gradient-to-tl from-sigap-secondary to-gray-50"
   >

@@ -1,6 +1,8 @@
 <script setup>
   import Simple from "./Simple.vue";
   import Full from "./Full.vue";
+  import { getAuth, onAuthStateChanged } from "@firebase/auth";
+  import { ref } from "vue";
 
   const simpleNav = [
     "index",
@@ -19,6 +21,20 @@
     "myprofile",
     "admin",
   ];
+
+  const auth = getAuth();
+
+  const isLogin = ref(false);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      isLogin.value = true;
+      console.log("dari nav: ", user, uid);
+    } else {
+      console.log("dari nav: User Logout");
+    }
+  });
 </script>
 
 <template>

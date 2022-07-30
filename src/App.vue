@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <Navbar />
+  <Navbar v-if="$route.name != 'index'" />
   <RouterView />
   <Footer
     v-if="
