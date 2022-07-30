@@ -6,13 +6,22 @@
   import { ref } from "vue";
   import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
   import styles from "../styles";
-
+  import {
+    addDoc,
+    collection,
+    doc,
+    getFirestore,
+    setDoc,
+  } from "@firebase/firestore";
+  import swal from "sweetalert";
   const router = useRouter();
 
   const inputs = ref({
     email: "",
     password: "",
   });
+
+  const db = getFirestore();
 
   const handleRegister = () => {
     //console.log(inputs.value);
@@ -21,10 +30,27 @@
       inputs.value.email,
       inputs.value.password
     )
-      .then(() => {
-        swal("Register sukses", "Selamat Datang", "success").then(() => {
-          router.push({ name: "home" });
-        });
+      .then((credential) => {
+        console.log(credential);
+        if (credential && credential.user) {
+          setDoc(doc(collection(db, "customer"), credential.user.uid), {
+            email: inputs.value.email,
+            password: inputs.value.password,
+          }).then(() => {
+            swal("Register sukses", "Selamat Datang", "success").then(() => {
+              router.push({ name: "home" });
+            });
+          });
+          // addDoc(collection(db, "customer"), {
+          //   id: credential.user.uid,
+          //   email: inputs.value.email,
+          //   password: inputs.value.password,
+          // }).then(() => {
+          //   swal("Register sukses", "Selamat Datang", "success").then(() => {
+          //     router.push({ name: "home" });
+          //   });
+          // });
+        }
       })
       .catch((err) => {
         console.log(err.code, err.message);

@@ -3,7 +3,7 @@
   import FaqAccordion from "../components/FaqAccordion.vue";
   import HelpCenterButton from "../components/HelpCenterButton.vue";
   import iconWhatsapp from "../assets/icons/whatsapp.png";
-  import { ref } from "vue";
+  import { onMounted, onUnmounted, ref } from "vue";
   import {
     doc,
     getFirestore,
@@ -12,8 +12,13 @@
   } from "@firebase/firestore";
   import swal from "sweetalert";
   import { RouterLink } from "vue-router";
+  import { getAuth, onAuthStateChanged } from "@firebase/auth";
 
-  const customerId = "c8txMBcP0JqRil0vJquS";
+  const db = getFirestore();
+  const auth = getAuth();
+
+  let customerId = "c8txMBcP0JqRil0vJquS";
+
   const customerProfile = ref({
     username: "",
     email: "",
@@ -21,12 +26,9 @@
     phone: "",
   });
 
-  const db = getFirestore();
-
   const getCustomerData = () => {
     const docref = doc(db, "customer", customerId);
     onSnapshot(docref, (doc) => {
-      //console.log(doc.data());
       const resData = doc.data();
       customerProfile.value.username = resData.username;
       customerProfile.value.email = resData.email;
@@ -34,7 +36,21 @@
       customerProfile.value.phone = resData.phone;
     });
   };
-  getCustomerData();
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      customerId = uid;
+      getCustomerData();
+      console.log("dari myprofile: ", user, uid);
+    } else {
+      console.log("dari myprofile: User Logout");
+    }
+  });
+
+  onMounted(() => {
+    console.log("ci=ust", customerId);
+  });
 
   const handleSubmit = () => {
     const docref = doc(db, "customer", customerId);
