@@ -10,7 +10,7 @@
     </div>
     <div class="flex flex-row gap-8">
       <a
-        href="https://api.whatsapp.com/send?phone=085777620414"
+        href="https://api.whatsapp.com/send?phone=6285777620414"
         target="_blank"
       >
         <HelpCenterButton
