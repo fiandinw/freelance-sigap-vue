@@ -9,10 +9,23 @@
       Pusat Dukugan
     </div>
     <div class="flex flex-row gap-8">
-      <HelpCenterButton :icon="iconWhatsapp" title="Whatsapp Support Center" />
-      <HelpCenterButton :icon="iconWhatsapp" title="Email Support Center"
-        ><Icon class="text-white text-8xl" icon="fontisto:email"
-      /></HelpCenterButton>
+      <a
+        href="https://api.whatsapp.com/send?phone=085777620414"
+        target="_blank"
+      >
+        <HelpCenterButton
+          :icon="iconWhatsapp"
+          title="Whatsapp Support Center"
+        />
+      </a>
+      <a
+        href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRwRCVSLvRmMvvLdgMZLbCsDNsxFHBzdPFMwkFRPrbXRnLfqWMtbsXgzKGjMWQNgcDftZxvW"
+        target="_blank"
+      >
+        <HelpCenterButton :icon="iconWhatsapp" title="Email Support Center"
+          ><Icon class="text-white text-8xl" icon="fontisto:email"
+        /></HelpCenterButton>
+      </a>
     </div>
   </main>
 </template>

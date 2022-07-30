@@ -21,6 +21,14 @@
         </div>
         <div>Pembayaran</div>
       </div>
+      <div class="flex flex-row items-center gap-2">
+        <div
+          class="bg-sigap-primary p-1 w-[30px] h-[30px] flex items-center justify-center rounded-[100%] text-white"
+        >
+          3
+        </div>
+        <div class="underline">Invoice</div>
+      </div>
     </section>
 
     <article class="container py-16 flex flex-row gap-8">
@@ -118,7 +126,7 @@
         </section>
       </div>
       <div class="w-5/12 relative flex justify-center">
-        <FloatingOrderDetailCard />
+        <FloatingOrderDetailCard :isBayar="true" />
       </div>
     </article>
   </main>

@@ -2,6 +2,7 @@
   import { RouterLink } from "vue-router";
   defineProps({
     paymentMethod: { default: "" },
+    isBayar: { default: false },
   });
 </script>
 <template>
@@ -39,7 +40,7 @@
         <div class="font-semibold text-2xl text-sigap-primary">0 Hari</div>
       </div>
       <div class="divider border-t-[1px] border-sigap-gray my-6"></div>
-      <RouterLink :to="{ name: 'payment' }">
+      <RouterLink v-if="isBayar" :to="{ name: 'payment' }">
         <button
           class="mb-4 bg-sigap-primary w-full py-4 font-bold text-2xl text-white rounded-full"
         >
