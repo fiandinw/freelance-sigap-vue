@@ -273,33 +273,72 @@
       }
     "
   >
-    <div class="bg-white rounded-lg p-4">
-      <h1 class="mb-4">INVOICE</h1>
+    <div class="bg-white rounded-lg p-4 flex flex-col items-center w-[700px]">
+      <h1 class="mb-8 font-bold text-lg">INVOICE</h1>
       <img
         v-if="bankSelect == 'bri'"
-        class="w-full h-full object-contain"
+        class="w-[100px] h-full object-contain"
         :src="bankbri"
         alt="bri"
       />
       <img
         v-if="bankSelect == 'bjb'"
-        class="w-full h-full object-contain"
+        class="w-[100px] h-full object-contain"
         :src="bankbjb"
         alt="bjb"
       />
       <img
         v-if="bankSelect == 'bni'"
-        class="w-full h-full object-contain"
+        class="w-[100px] h-full object-contain"
         :src="bankbni"
         alt="bni"
       />
       <img
         v-if="bankSelect == 'jago'"
-        class="w-full h-full object-contain"
+        class="w-[100px] h-full object-contain"
         :src="bankjago"
         alt="jago"
       />
-      <p class="mt-12">{{ bankSelect }}</p>
+      <div v-if="bankSelect == 'bni'" class="mt-8 font-bold text-center">
+        <p>0817349329</p>
+        <p>Sdr MUHAMMAD AZIZ MUFLIH</p>
+      </div>
+      <div v-if="bankSelect == 'jago'" class="mt-8 font-bold text-center">
+        <p>5085 8068 3094</p>
+        <p>ALIFIANDI NURSANNI WIRIADIKUSUMAH</p>
+      </div>
+      <div class="flex flex-row w-full items-center justify-between mt-8 px-20">
+        <div>
+          <ul class="font-bold">
+            <li>Company</li>
+            <li>Invoice</li>
+            <li>Sub Total Jasa</li>
+            <li>Total Diskon</li>
+            <li>Biaya Penanganan</li>
+            <li class="mt-4">Total Pembayaran</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-center">
+            <li>Aglees</li>
+            <li>1eDdgGkRllasUhDMVEDt</li>
+            <li>Rp xxK</li>
+            <li>Rp xxK</li>
+            <li>Rp xxK</li>
+            <li class="mt-4">Rp xxK</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12">Lakukan pembayaran ini sebelum</div>
+      <div class="">Day, dd MMMM YYYY, HH:mm</div>
+      <div class="mt-4">Catatan:</div>
+      <div class="px-12 text-center">
+        Transaksi yang sudah dibayarkan tidak dapat dibatalkan atau dikembalikan
+        uang dengan alasan apapun
+      </div>
+      <div class="text-sigap-secondary mt-12 self-start">
+        <a href="/tatacarabank" target="_blank">*tata cara pembayaran</a>
+      </div>
     </div>
   </div>
 </template>
